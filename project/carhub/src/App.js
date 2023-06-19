@@ -2,10 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Groups from './pages/groups'
+import Groups from './pages/groups/groups'
 import Home from './pages/home'
 import Account from './pages/account'
-import Messages from './pages/messages'
+import Messages from './pages/messages/messages'
 import ItemShop from './pages/itemshop'
 import Shop from './pages/shop'
 
