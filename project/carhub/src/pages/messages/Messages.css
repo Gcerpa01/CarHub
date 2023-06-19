@@ -1,0 +1,19 @@
+.message-container{
+    background-color: #424242;
+    margin-left: auto;
+    margin-right: auto;
+    flex:1;
+}
+
+.container{
+    display: flex;
+}
+
+
+.groups-list{
+    margin-right:60%;
+    background-color: #322e2e;
+    flex:1;
+
+}
+
