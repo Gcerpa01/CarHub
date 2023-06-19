@@ -44,7 +44,6 @@ export default function Account() {
   return (
     <div className="App">
       <Header />
-      <h3>My Account</h3>
       <div className="profile-container">
         <div className="left-container">
           <button

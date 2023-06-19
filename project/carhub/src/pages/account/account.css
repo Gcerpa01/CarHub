@@ -1,6 +1,7 @@
   .profile-container {
     display: flex;
     margin-top: 40px;
+    padding: 0% 10% 0% 10%;
   }
   
   .left-container {
@@ -8,25 +9,34 @@
     flex-direction: column;
     width: 200px;
     padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 8px;
+    background-color: #333;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
+  
   
   .right-container {
     flex: 1;
     padding: 20px;
-    background-color: #ebebeb;
-    border-radius: 8px;
+    background-color: #333;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
   
   .left-container button {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: transparent;
+    background-color: #222;
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    color: #333;
+    color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
