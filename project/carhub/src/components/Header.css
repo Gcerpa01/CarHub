@@ -1,23 +1,24 @@
-/* Font Awesome icons */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-
-
 .header {
   background-color: #333;
-  color: #fff;
-  padding: 20px;
+  color: #ddd;
 }
 
-.top-bar {
-  display:flex;
-  align-items: center;
+.navbar {
+  display: flex;
+  align-items: flex-end;
   justify-content: flex-end;
-  padding: 1px 0; /* Adjust the padding as needed */
+  padding: 0% 2% 0% 2%;
 }
 
-.account-dropdown {
-  position: relative;
+.actionbar {
+  font-size: 12px;
+  background-color: #962626;
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom */
+  justify-content: flex-end; /* Align items to the right */
+  padding: 1px 1% 1px 1%; /* Equal padding on all sides */
 }
+
 
 .account-button {
   background: none;
@@ -25,58 +26,63 @@
   color: #fff;
   cursor: pointer;
   font-size: 16px;
+  margin-left: 20px; /* Adjust the margin as needed */
 }
 
-.dropdown-content {
-  display: none;
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  content: "";
   position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  padding: 10px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  left: 0;
+  bottom: -22px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffff;
 }
 
-.account-dropdown:hover .dropdown-content {
-  display: block;
+.actionbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .logo a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 24px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
+.actionbar-links a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  
+.actionbar-links li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.actionbar-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.actionbar-links a:hover {
+  position: relative;
+}
