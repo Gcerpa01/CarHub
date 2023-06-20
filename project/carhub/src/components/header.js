@@ -18,7 +18,7 @@ export default function Header() {
       </nav>
       <nav className="actionbar">
         <ul className="actionbar-links">
-          <li><a href="/">My Account</a></li>
+          <li><a href="/account">My Account</a></li>
           <li><a href="/">Cart ( {/* script goes here */} )</a></li>
         </ul>
       </nav>
