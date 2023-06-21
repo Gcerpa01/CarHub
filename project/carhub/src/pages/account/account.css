@@ -46,6 +46,10 @@
     background-color: #ccc;
     color: #000;
   }
+
+  .form {
+    position: relative;
+  }
   
   /* Additional styles for the rest of the page */
   

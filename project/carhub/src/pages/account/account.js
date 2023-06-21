@@ -1,28 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import './account.css';
 import Orders from '../../db/orders.json';
 
 export default function Account() {
+  const [selectedOption, setSelectedOption] = useState('profile');
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    // Simulating fetching JSON data from an API
-    const fetchOrders = async () => {
-      try {
-        const response = await fetch(Orders); // Replace with your API endpoint
-        const data = await response.json();
-        setOrders(data);
-      } catch (error) {
-        console.error('Error fetching orders:', error);
-      }
-    };
-
-    fetchOrders();
+    setOrders(Orders);
   }, []);
-
-  const [selectedOption, setSelectedOption] = useState('profile');
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -43,7 +31,6 @@ export default function Account() {
               <input type="email" id="email" name="email" placeholder="Enter your email address" /><br />
               <label htmlFor="bio">Bio:</label><br />
               <textarea id="bio" name="bio" placeholder="Write a short bio about yourself"></textarea><br />
-              {/* Additional form fields and actions */}
             </form>
           </div>
         );
@@ -67,36 +54,37 @@ export default function Account() {
                 <option value="spanish">Spanish</option>
                 <option value="french">French</option>
               </select><br />
-              {/* Additional form fields and actions */}
             </form>
           </div>
         );
       case 'orders':
         return (
           <div>
-        {orders.length > 0 ? (
-          <div>
-            {orders.map((order) => (
-              <div key={order.orderNumber}>
-                <h3>Order Number: {order.orderNumber}</h3>
-                <p>Date: {order.date}</p>
-                <h4>Items:</h4>
-                <ul>
-                  {order.items.map((item, index) => (
-                    <li key={index}>
-                      {item.name} - Quantity: {item.quantity} - Price: ${item.price.toFixed(2)}
-                    </li>
-                  ))}
-                </ul>
-                <p>Total: ${order.total.toFixed(2)}</p>
-                <p>Status: {order.status}</p>
-              </div>
-            ))}
+          <h2>Your Orders</h2>
+          <div className="order-list">
+            {orders.length > 0 ? (
+              orders.map((order) => (
+                <div key={order.orderNumber} className="order-item">
+                  <h3>Order Number: {order.orderNumber}</h3>
+                  <p>Date: {order.date}</p>
+                  <p>Status: {order.status}</p>
+                  <p>Total: {order.total}</p>
+                  <ul>
+                    {order.items.map((item) => (
+                      <li key={item.name}>
+                        <p>{item.name}</p>
+                        <p>Quantity: {item.quantity}</p>
+                        <p>Price: {item.price}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <p>No orders found.</p>
+            )}
           </div>
-        ) : (
-          <p>No orders available.</p>
-        )}
-      </div>
+        </div>
         );
       case 'billing':
         return (
@@ -111,14 +99,12 @@ export default function Account() {
               <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" /><br />
               <label htmlFor="billingAddress">Billing Address:</label><br />
               <textarea id="billingAddress" name="billingAddress" placeholder="Enter your billing address"></textarea><br />
-              {/* Additional form fields and actions */}
             </form>
           </div>
         );
       default:
         return null;
     }
-    
   };
 
   return (
@@ -155,7 +141,6 @@ export default function Account() {
           {renderOptionContent()}
         </div>
       </div>
-      
       <Footer />
     </div>
   );
