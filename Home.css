@@ -1,0 +1,101 @@
+ /* Additional CSS styles can be added here */
+ .logo {
+    text-align: center;
+  }
+  .top-right {
+    float: right;
+    margin-right: 10px;
+  }
+
+
+  .sponsors {
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  .sponsors img {
+    height: 50px;
+    margin: 10px;
+  }
+  .customer-reviews {
+  max-width: 600px;
+  margin: 0 auto;
+  }
+
+  h2 {
+  text-align: center;
+  }
+
+  .review {
+  margin-bottom: 20px;
+  }
+
+  .reviewer-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  }
+
+  .reviewer-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  }
+
+  .review-text {
+  font-style: italic;
+  line-height: 1.5;
+  }
+  footer{ background-color: white; text-align: center; } 
+  .cp-text{ color: rgba(0,0,0,.7); text-shadow: 0 1px rgba(255, 255, 255, 0.1);}
+
+  section #services {
+      text-align: center;
+      transform: translatez(0);
+  }
+  section #services h2 {
+      margin: 60px 0px 20px;
+      color: black;
+      font-size: 2.4em;
+      text-transform: uppercase;
+      text-align: center;
+  }
+  section #services li {
+      width: 120px;
+      height: 140px;
+      display: inline-block;
+      margin: 20px;
+      list-style: none;
+  }
+  section #services li div {
+      width: 80px;
+      height: 80px;
+      color: #74d4b3;
+      font-size: 3.0em;
+      text-align: center;
+      line-height: 80px;
+      background-color: rgb(0, 0, 0);
+      transition: all 0.5s ease;
+  }
+  section #services li a {
+      color: white;
+  }
+  section #services li div:hover {
+      transform: rotate(360deg);
+      border-radius: 100px;
+  }
+  section #services li span {
+      width: 80px;
+      height: 15px;
+      display: block;
+      padding: 12px 0px;
+      color: black;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      text-align: center;
+  }
+  .center{
+      align-items: center !important;
+      text-align: center !important;
+  }
