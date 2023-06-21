@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	$(window).scroll(function() {
   	if($(document).scrollTop() > 10) {
     	$('#nav').addClass('shrink');
@@ -7,4 +7,4 @@ $(document).ready(function() {
     $('#nav').removeClass('shrink');
     }
   });
-});
+});*/
