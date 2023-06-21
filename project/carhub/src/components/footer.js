@@ -6,9 +6,10 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-links">
-          <a href="/groups">Groups</a>
-          <a href="/messages">Messages</a>
+          <a href="/">Home</a>
           <a href="/shop">Shop</a>
+          <a href="/groups">Groups</a>
+          <a href="/messages">Messenger</a>
           <a href="/account">My Account</a>
         </div>
         <hr className="footer-separator" />

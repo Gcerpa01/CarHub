@@ -5,20 +5,20 @@ import logo from '../resources/logo.png';
 export default function Header() {
   return (
     <header className="header">
-      <nav className="navbar">
+      <nav className="navbar" style={{ padding: '1% 2% 1% 2%'}}>
         <a href="/">
         <img src={logo} alt="Logo" />
         </a>
         <ul className="nav-links">
-          <li><a href="/groups">Groups</a></li>
-          <li><a href="/messages">Messages</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/shop">Shop</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/groups">Groups</a></li>
+          <li><a href="/messages">Messenger</a></li>
         </ul>
       </nav>
       <nav className="actionbar">
         <ul className="actionbar-links">
-          <li><a href="/">My Account</a></li>
+          <li><a href="/account">My Account</a></li>
           <li><a href="/">Cart ( {/* script goes here */} )</a></li>
         </ul>
       </nav>

@@ -7,7 +7,6 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 0% 2% 0% 2%;
 }
 
 .actionbar {
@@ -16,9 +15,8 @@
   display: flex;
   align-items: flex-end; /* Align items to the bottom */
   justify-content: flex-end; /* Align items to the right */
-  padding: 1px 1% 1px 1%; /* Equal padding on all sides */
+  padding: 0% 2% 0% 0%;
 }
-
 
 .account-button {
   background: none;
@@ -29,13 +27,11 @@
   margin-left: 20px; /* Adjust the margin as needed */
 }
 
-
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 0;
 }
 
 .nav-links li:not(:last-child) {
@@ -66,7 +62,6 @@
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 0;
 }
 
 .actionbar-links a {
