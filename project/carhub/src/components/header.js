@@ -14,6 +14,7 @@ export default function Header() {
           <li><a href="/shop">Shop</a></li>
           <li><a href="/groups">Groups</a></li>
           <li><a href="/messages">Messenger</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
       <nav className="actionbar">

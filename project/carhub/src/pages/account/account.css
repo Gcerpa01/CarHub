@@ -1,6 +1,7 @@
   .profile-container {
     display: flex;
     margin-top: 40px;
+    height: 500px;
     padding: 0% 10% 0% 10%;
   }
   
@@ -43,6 +44,7 @@
   
   .left-container button.active {
     background-color: #ccc;
+    color: #000;
   }
   
   /* Additional styles for the rest of the page */
