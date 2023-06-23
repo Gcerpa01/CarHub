@@ -1,0 +1,13 @@
+.form-group {
+    text-align: left;
+}
+
+.dropdown {
+    display: flex;
+}
+
+.flexbox { 
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
