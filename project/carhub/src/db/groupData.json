@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "name": "First Group",
+      "members": 6
+    },
+    {
+      "name": "Second Group",
+      "members": 10
+    },
+    {
+      "name": "Third Group",
+      "members": 23
+    }
+  ]
+}

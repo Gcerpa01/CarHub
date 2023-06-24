@@ -2,24 +2,45 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import './Groups.css'; // Assuming the CSS file is named "Header.css"
 
+import groupData from '../../db/groupData.json';
+import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export default function Groups() {
     return (
         <>
             <Header />
 
-            <form>
-                <div>
-                    <input type="text" id="group_search" class="form-control" placeholder="Search for group" />
+            <div class="search-box">
+                <form>
+                    <div>
+                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" />
+                    </div>
+                </form>
+
+                <div className="search-container" style={{visibility:"visible"}}>
+                    {/* Generate search results dynamically */}
+                    {groupData.groups.map((group, index) => (
+                        <div className="search-result-container" key={index}>
+                            <div className="search-result">
+                                <text className="group-name">{group.name}</text>
+                                <text className="group-members">Members: {group.members}</text>
+                                <button className="join-button">Join</button>
+                            </div>
+                            <div className="rowDivider"></div>
+                        </div>
+                    ))}
                 </div>
-            </form>
+
+            </div>
+
+
 
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="rounded float-left w-50" />
                         <div class="carousel-container">
-                            <div class="carousel-caption">
+                            <div class="carousel-caption custom-caption">
                                 <h2 class="d-flex h-25 align-items-center justify-content-center">Motorcycle Hobbiests</h2>
                                 <p class="d-flex h-50 align-items-center justify-content-center">This contains the information regarding the current club</p>
                                 <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>

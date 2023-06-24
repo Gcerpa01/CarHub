@@ -4860,7 +4860,7 @@ textarea.form-control-lg {
   .carousel-indicators .active {
     opacity: 1; }
 
-/* .carousel-caption {
+.carousel-caption .custom-caption {
   position: absolute;
   right: 15%;
   bottom: 1.25rem;
@@ -4868,10 +4868,10 @@ textarea.form-control-lg {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   color: #fff;
-  text-align: center; } */
+  text-align: center; }
 
 
-.carousel-caption {
+/* .carousel-caption {
     position: absolute;
     left: auto;
     width: 50%;
@@ -4881,7 +4881,7 @@ textarea.form-control-lg {
     bottom:0;
     right:0;
     text-align: center;
-}
+} */
 
 
 .carousel-dark .carousel-control-prev-icon,
