@@ -4,12 +4,6 @@
 }
 
 
-.groups-container{
-    background-color: #322e2e;
-    overflow: scroll;
-    width:40%;
-    
-}
 
 .messages-container{
     background-color: #424242;
@@ -23,6 +17,40 @@
     width: 90%;
 }
 
+
+.groups-container{
+    background-color: #322e2e;
+    overflow: scroll;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+}
+.groups-container button{
+    width: 98%;
+
+    height: 100%;
+    background-color: #222;
+    border:groove 1px;
+    border-radius: 1vh;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.groups-container button:hover{
+    background-color: #A20025;
+    width: 100%;
+}
+
+.groups-container button.active{
+    background-color: #962626;
+    
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 100%;
+}
+
 .user-group-item {
     position: relative;
     display: inline-block;
@@ -31,7 +59,7 @@
     text-decoration: none;
     background-color: var(--bs-list-group-bg);
     border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color); 
-    height: vh;
+    height: 1vh;
     border-radius: 1vh;
 } 
 
