@@ -6,11 +6,10 @@ import './Groups.css'; // Assuming the CSS file is named "Header.css"
 
 import groupData from '../../db/groupData.json';
 import { isVisible } from '@testing-library/user-event/dist/utils';
-import { useState,useEffect } from 'react'; // Import the useEffect hook
+import { useState, useEffect } from 'react'; // Import the useEffect hook
 
 
 export default function Groups() {
-
 
     const [searchValue, setSearchValue] = useState('');
     const [filteredGroups, setFilteredGroups] = useState([]);
@@ -32,6 +31,17 @@ export default function Groups() {
         setFilteredGroups(filtered);
     };
 
+    const joinGroup = (group) => {
+        // Find the index of the group in the groupData array
+        const index = groupData.groups.findIndex((item) => item.name === group.name);
+      
+        if (index !== -1) {
+          groupData.groups[index].joined = true; // Update the joined property to true
+          setFilteredGroups([...groupData.groups]); // rerender
+        }
+
+      };
+      
 
     return (
         <>
@@ -40,7 +50,7 @@ export default function Groups() {
             <div class="search-box">
                 <form>
                     <div>
-                        <input type="text" id="group_search" class="form-control" placeholder="Search for group"  onChange={userSearch} />
+                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} />
                     </div>
                 </form>
 
@@ -52,7 +62,12 @@ export default function Groups() {
                                 <div className="search-result">
                                     <text className="group-name">{group.name}</text>
                                     <text className="group-members">Members: {group.members}</text>
-                                    <button className="join-button">Join</button>
+
+
+                                    {group.joined ? (<button className="join-button inactive">Joined</button>)
+                                        : (<button className="join-button" onClick={() => joinGroup(group)}>Join</button>)
+                                    }
+
                                 </div>
                                 <div className="rowDivider"></div>
                             </div>
@@ -77,52 +92,19 @@ export default function Groups() {
                                 <h3 className="carousel-group-members">members: {group.members}</h3>
                                 <div className="carousel-description"> <p>{group.summary}</p> </div>
                                 <p>
-                                    <a class="btn btn-sm btn-primary align-items-center" href="#">
-                                        Join Group
-                                    </a>{' '}
+
+
+                                    {group.joined ? <a class="btn btn-sm btn-primary align-items-center disabled" href="#">
+                                        Joined Group
+                                    </a>
+                                        : (<a class="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
+                                    Join Group </a>)
+                                    }
+
                                 </p>
                             </div>
                         </div>
                     ))}
-
-                    {/* 
-                    <div class="carousel-item active" >
-                        <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
-                        <div className="custom-caption">
-                            <h2 className="carousel-group-name">Motorcycle Hobbiests</h2>
-                            <h3 className="carousel-group-members"> members: 6</h3>
-                            <div className="carousel-description">
-                                <p>This contains the test nformation regarding the current club </p>
-                            </div>
-                            <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>
-                        </div>
-                    </div>
-
-
-                    <div class="carousel-item " >
-                        <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
-                        <div className="custom-caption">
-                            <h2 className="carousel-group-name">Motorcycle Hobbiests</h2>
-                            <h3 className="carousel-group-members"> members: 6</h3>
-                            <div className="carousel-description">
-                                <p>This contains the test nformation regarding the current club </p>
-                            </div>
-                            <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>
-                        </div>
-                    </div>
-
-
-                    <div class="carousel-item ">
-                        <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
-                        <div className="custom-caption">
-                            <h2 className="carousel-group-name">Motorcycle Hobbiests</h2>
-                            <h3 className="carousel-group-members"> members: 6</h3>
-                            <div className="carousel-description">
-                                <p>This contains the test nformation regarding the current club </p>
-                            </div>
-                            <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>
-                        </div>
-                    </div> */}
 
 
                 </div>

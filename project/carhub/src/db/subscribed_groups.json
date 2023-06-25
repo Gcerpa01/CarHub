@@ -1,13 +1,13 @@
 {
     "groups": [
       {
-        "name": "First Group"
+        "name": "Ford"
       },
       {
-        "name": "Second Group"
+        "name": "Kia"
       },
       {
-        "name": "Third Group"
+        "name": "Tesla"
       }
     ]
   }
