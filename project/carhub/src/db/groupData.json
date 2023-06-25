@@ -1,23 +1,33 @@
 {
   "groups": [
     {
-      "name": "First Group",
+      "name": "Ford",
       "members": 6,
       "summary": "test",
-      "joined": false
+      "joined": false,
+      "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2014/12/2004-ford-gt-models-shown-photo-608802-s-original.jpg"
     },
     {
-      "name": "Second Group",
+      "name": "Lucid",
       "members": 10,
       "summary": "test",
-      "joined":false
+      "joined":false,
+      "image": "https://lucidmotors.com/s3fs-public/2023-06/lucid-air-sapphire-front-qtr.webp"
     },
     {
-      "name": "Third Group",
+      "name": "Mystery",
       "members": 23,
       "summary": "test",
-      "joined":false
+      "joined":false,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavQcfvinPMZhFuHdbDvDC_W5iIxcK0RMeM9UjDrc-uA&s"
 
+    },
+    {
+      "name": "Racer",
+      "members": 3,
+      "summary": "test",
+      "joined":false,
+      "image": "https://www.charlottemotorspeedway.com/images/Barry-Sinex--Mach-Five1-lg.jpg"
     }
   ]
 }

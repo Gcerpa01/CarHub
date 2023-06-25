@@ -54,7 +54,23 @@ export default function Groups() {
                     <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
+                    {groupData.groups.slice(0, 3).map((group, index) => (
+                        <div class={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                            <img src={group.image} class="group-image" alt="Group" />
+                            <div className="custom-caption">
+                                <h2 className="carousel-group-name">{group.name}</h2>
+                                <h3 className="carousel-group-members">members: {group.members}</h3>
+                                <div className="carousel-description"> <p>{group.summary}</p> </div>
+                                <p>
+                                    <a class="btn btn-sm btn-primary align-items-center" href="#">
+                                        Join Group
+                                    </a>{' '}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
 
+{/* 
                     <div class="carousel-item active" >
                         <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
                         <div className="custom-caption">
@@ -66,7 +82,7 @@ export default function Groups() {
                             <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>
                         </div>
                     </div>
-                    
+
 
                     <div class="carousel-item " >
                         <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
@@ -79,7 +95,7 @@ export default function Groups() {
                             <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>
                         </div>
                     </div>
-                    
+
 
                     <div class="carousel-item ">
                         <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
@@ -91,8 +107,8 @@ export default function Groups() {
                             </div>
                             <p><a class="btn btn-sm btn-primary align-items-center" href="#">Join Group</a> </p>
                         </div>
-                    </div>
-                    
+                    </div> */}
+
 
                 </div>
 
