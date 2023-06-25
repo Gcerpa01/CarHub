@@ -3,23 +3,23 @@
     {
       "name": "Ford",
       "members": 6,
-      "summary": "test",
+      "summary": "Ford introduced methods for large-scale manufacturing of cars and large-scale management of an industrial workforce using elaborately engineered manufacturing sequences typified by moving assembly lines; by 1914, these methods were known around the world as Fordism. Ford's former UK subsidiaries Jaguar and Land Rover, acquired in 1989 and 2000, respectively, were sold to the Indian automaker Tata Motors in March 2008. Ford owned the Swedish automaker Volvo from 1999 to 2010.[10] In 2011, Ford discontinued the Mercury brand, under which it had marketed entry-level luxury cars in the United States, Canada, Mexico, and the Middle East since 1938.",
       "joined": false,
       "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2014/12/2004-ford-gt-models-shown-photo-608802-s-original.jpg"
     },
     {
       "name": "Lucid",
       "members": 10,
-      "summary": "test",
+      "summary": "Lucid Group, Inc. is an American electric vehicle manufacturer headquartered in Newark, California. The Lucid vehicles are designed in California and manufactured at Lucid's factory in Arizona. The company was founded in 2007. The first Lucid vehicle, the Lucid Air, is offered in several trim levels, including the Lucid Air Pure, starting at $87,400.[6] Other Lucid Air trim levels include the Lucid Air Touring and Grand Touring models, the latter available in Performance equipment level as well.The company's second model, the Lucid Gravity SUV EV is scheduled to launch in 2024.",
       "joined":false,
       "image": "https://lucidmotors.com/s3fs-public/2023-06/lucid-air-sapphire-front-qtr.webp"
     },
     {
       "name": "Mystery",
       "members": 23,
-      "summary": "test",
+      "summary": "The Mystery Machine is the main transportation of Mystery Inc., taking them on their adventures all over the world. Fred is the owner,[1][2][3] and has a very strong attachment to it.[4][2] Although he was kind enough to lend the Mystery Machine to Scooby-Doo, Shaggy Rogers, and Scrappy-Doo for a few years, when they went on their own adventures, and then their time reunited with Daphne Blake, during their journalistic escapades. Occasionally, Fred would help them out and take over the driving in that time.",
       "joined":false,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavQcfvinPMZhFuHdbDvDC_W5iIxcK0RMeM9UjDrc-uA&s"
+      "image": "https://visor.ph/wp-content/uploads/2018/03/mystery-machine-main03.jpg"
 
     },
     {

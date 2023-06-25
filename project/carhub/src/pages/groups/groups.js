@@ -6,10 +6,16 @@ import './Groups.css'; // Assuming the CSS file is named "Header.css"
 
 import groupData from '../../db/groupData.json';
 import { isVisible } from '@testing-library/user-event/dist/utils';
-import { useEffect } from 'react'; // Import the useEffect hook
+import { useState,useEffect } from 'react'; // Import the useEffect hook
 
 
 export default function Groups() {
+
+
+    const [searchValue, setSearchValue] = useState('');
+    const [filteredGroups, setFilteredGroups] = useState([]);
+
+    const showSearchContainer = searchValue !== '';
 
 
     useEffect(() => {
@@ -19,6 +25,13 @@ export default function Groups() {
         });
     }, []);
 
+    const userSearch = (e) => {
+        const value = e.target.value;
+        setSearchValue(value);
+        const filtered = groupData.groups.filter((group) => group.name.toLowerCase().includes(value.toLowerCase()));
+        setFilteredGroups(filtered);
+    };
+
 
     return (
         <>
@@ -27,23 +40,25 @@ export default function Groups() {
             <div class="search-box">
                 <form>
                     <div>
-                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" />
+                        <input type="text" id="group_search" class="form-control" placeholder="Search for group"  onChange={userSearch} />
                     </div>
                 </form>
 
-                <div className="search-container" style={{ visibility: "visible" }}>
-                    {/* Generate search results dynamically */}
-                    {groupData.groups.map((group, index) => (
-                        <div className="search-result-container" key={index}>
-                            <div className="search-result">
-                                <text className="group-name">{group.name}</text>
-                                <text className="group-members">Members: {group.members}</text>
-                                <button className="join-button">Join</button>
+                {showSearchContainer && (
+                    <div className="search-container" style={{ visibility: 'visible' }}>
+                        {/* Generate search results dynamically */}
+                        {filteredGroups.map((group, index) => (
+                            <div className="search-result-container" key={index}>
+                                <div className="search-result">
+                                    <text className="group-name">{group.name}</text>
+                                    <text className="group-members">Members: {group.members}</text>
+                                    <button className="join-button">Join</button>
+                                </div>
+                                <div className="rowDivider"></div>
                             </div>
-                            <div className="rowDivider"></div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
 
             </div>
 
@@ -70,7 +85,7 @@ export default function Groups() {
                         </div>
                     ))}
 
-{/* 
+                    {/* 
                     <div class="carousel-item active" >
                         <img src="https://www.shutterstock.com/image-photo/motorbike-on-road-riding-having-260nw-1838812744.jpg" class="group-image" />
                         <div className="custom-caption">
