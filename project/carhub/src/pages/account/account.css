@@ -47,9 +47,64 @@
     color: #000;
   }
 
-  .form {
-    position: relative;
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 2% auto 0; /* Center horizontally and add 20px padding from the top */
+    padding: 20px;
+    background-color: #333;
+    border-style: solid;
+    border-color: #232323;
+    border-width: 1px;
+    border-radius: 8px;
   }
   
-  /* Additional styles for the rest of the page */
+  .main-container {
+    height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #232323;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .order-item {
+    margin-bottom: 16px;
+    background-color: #861717;
+  }
+  
+  .order-header {
+    cursor: pointer;
+  }
+  
+  .order-details {
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .order-details p {
+    margin: 4px 0;
+  }
+  
+  .order-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-details li {
+    margin-bottom: 8px;
+  }
+  
+  .order-details li p {
+    margin: 0;
+  }
+  
   
