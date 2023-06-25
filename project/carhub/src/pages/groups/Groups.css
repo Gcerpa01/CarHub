@@ -1,6 +1,8 @@
 .search-box{
     display:flex;
     flex-direction: column;
+    width: 100%;
+    top:8%;
 }
 
 .search-container{
@@ -8,7 +10,11 @@
     flex-direction: column;
     overflow: scroll;
     position: relative;
-    height:7vh;
+    height:8vh;
+    width: 100%;
+    border-radius:1vh ;
+    scrollbar-width: 1000px;
+    
 }
 
 .search-result{
@@ -22,7 +28,10 @@
 .search-result-container{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    /* border-top: 1px solid rgb(10, 10, 10); */
+    opacity: 75%;
+    /* visibility: hidden; */
 
 }
 .rowDivider {
@@ -46,12 +55,11 @@
 .group-name{
     position: absolute;
     left: 10px;
-
 }
 
 .group-members{
     position: absolute;
-    right: 200px;
+    right: 225px;
     font-size: 10px;
     margin-top: 2px;
     margin-bottom: 2px;
@@ -60,14 +68,48 @@
 
 
 
-.carousel-caption {
+.custom-caption {
     position: absolute;
     left: auto;
-    width: 50%;
+    width: 40%;
     height: 100%;
     background-color: #424549;
     opacity: 0.9;
     bottom:0;
     right:0;
     text-align: center;
+    color:black;
+    margin-right:10%;
 }
+
+.carousel-group-name{
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-description{
+    height:50%;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    margin-bottom: 2%;
+}
+
+
+.group-image{
+    width: 40%;
+    margin-left:10%;
+}
+
+#carousel-Groups{
+    width:95%;
+    margin-left:2.5%;
+}
+
+.carousel-group-members{
+    height: 10%;
+    font-size: 20px;
+}
+
+

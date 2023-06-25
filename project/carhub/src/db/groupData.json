@@ -2,15 +2,22 @@
   "groups": [
     {
       "name": "First Group",
-      "members": 6
+      "members": 6,
+      "summary": "test",
+      "joined": false
     },
     {
       "name": "Second Group",
-      "members": 10
+      "members": 10,
+      "summary": "test",
+      "joined":false
     },
     {
       "name": "Third Group",
-      "members": 23
+      "members": 23,
+      "summary": "test",
+      "joined":false
+
     }
   ]
 }
