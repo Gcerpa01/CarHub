@@ -1,6 +1,9 @@
-.header{
-
+.head{
+    color: white;
+    margin: auto;
+    background-color: #282c34;
     font-family: 'Raceline';
+    z-index: 0;
 }
 
 .partButton{
@@ -98,4 +101,64 @@
     padding-right: 3px;
     text-align: left;
     font-size: 20pt;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+    height: 1000px;
+}  
+
+.item-img{
+    padding-left: 100px;
+    position: fixed;
+}
+
+.item-name{
+    margin: auto;
+    font-size: 20pt;
+}
+
+.item-brand{
+    text-align: left;
+    padding-left: 12.5px;
+    padding-top: 10px;
+}
+
+.item-price{
+    text-decoration: overline;
+    font-size: 25pt;
+    padding-left: 12.5px;
+    padding-top: 10px;
+    text-align: left;
+    color: rgb(173, 21, 21);
+}
+
+.quantity{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.add-to-cart{
+    margin-left: 300px;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+.desciption{
+    text-align: left;
+}
+
+.features-title{
+    text-align: left;
+    font-size: 18pt;
+}
+
+.features{
+    text-align: left;
+    font-size: 15pt;
 }

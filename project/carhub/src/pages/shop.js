@@ -7,10 +7,12 @@ export default function Shop() {
   return (
     <div className="App">
       <Header />
-      <h2 class= "header">Part Selection</h2>
+      <div>
+      <h2 class= "head">Part Selection</h2>
+      </div>
       <div class="container part-list">
         <div class="row row-cols-9">
-          <div class="col"> <button class="partButton"><a href="/exhaust">Exhaust</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/itemshop">Exhaust</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Exterior</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Forced Induction</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Suspension</a></button></div>
@@ -22,11 +24,13 @@ export default function Shop() {
         </div>
       </div>
       <br></br>
-      <h2 class= "header">Featured Products</h2>
+      <div>
+      <h2 class= "head">Featured Products</h2>
+      </div>
       <div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><img src="BMW-Exhaust.jpg" class ="rounded" width ="150" height ="150"/></button>
+            <button class="part"><a href="/itemshop"><img src="BMW-Exhaust.jpg" class ="rounded" width ="150" height ="150"/></a></button>
             <button class="part"><div class="p-2">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3 (CH-FTX9)</div></button>
           </div>
           <div class="col-4">
@@ -64,7 +68,7 @@ export default function Shop() {
       </div>
       <br></br>
       <div>
-        <h2 class="header">What people are saying about us</h2>
+        <h2 class="head">What people are saying about us</h2>
         <br></br>
         <div class="reviews">
           <div class="review-img">
