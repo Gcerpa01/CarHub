@@ -7,7 +7,7 @@ export default function Shop() {
   return (
     <div className="App">
       <Header />
-      <h2 class= "part-selection">Part Selection</h2>
+      <h2 class= "header">Part Selection</h2>
       <div class="container part-list">
         <div class="row row-cols-9">
           <div class="col"> <button class="partButton"><a href="/exhaust">Exhaust</a></button></div>
@@ -22,7 +22,7 @@ export default function Shop() {
         </div>
       </div>
       <br></br>
-      <h2 class= "part-selection">Featured Products</h2>
+      <h2 class= "header">Featured Products</h2>
       <div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
@@ -64,7 +64,7 @@ export default function Shop() {
       </div>
       <br></br>
       <div>
-        <h2 class="part-selection">What people are saying about us</h2>
+        <h2 class="header">What people are saying about us</h2>
         <br></br>
         <div class="reviews">
           <div class="review-img">
@@ -75,7 +75,7 @@ export default function Shop() {
           <h1 class="review">Everyone I talk to at CARHUB is always willing to lend a helping hand. They get me to the right place, have what I need, and get it to me FAST! My favorite place to go for help on my builds!</h1>
         </div>
       </div>
-</div>
+    </div>
       <Footer />
     </div>
   );
