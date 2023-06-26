@@ -1,0 +1,164 @@
+.head{
+    color: white;
+    margin: auto;
+    background-color: #282c34;
+    font-family: 'Raceline';
+    z-index: 0;
+}
+
+.partButton{
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    width: 110px;
+    height: 55px;
+    vertical-align: middle;
+    font-family: 'Raceline';
+}
+@font-face{
+    font-family: 'Raceline';
+    src: url(RacelineDemo-rgmO9.otf);
+}
+.partButton:hover{
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: rgb(251, 49, 49);
+    border: none;
+    border-radius: 4px;
+    width: 110px;
+    height: 55px;
+    vertical-align: middle;
+}
+.partButton:active{
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: rgb(251, 93, 93);
+    border: none;
+    border-radius: 4px;
+    width: 110px;
+    height: 55px;
+    vertical-align: middle;
+}
+
+.partButton a{
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: none;
+}
+
+.part{
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #282c34;
+    border: none;
+    border-radius: 4px;
+}
+
+.part:hover{
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #373b42;
+    border: none;
+    border-radius: 4px;
+}
+
+.part:active{
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #494c51;
+    border: none;
+    border-radius: 4px;
+}
+
+.reviews{
+    padding: 10px;
+    margin: auto;
+    width: 800px;
+    height: 350px;
+    position: center;
+    background-color: #494c51;
+    border: none;
+    border-radius: 4px;
+}
+
+.review-img{
+    border-top-left-radius: 50% 50%;
+    padding-left: 10px;
+    padding-right: 700px;
+    padding-top: 5px;
+}
+
+.review-name{
+    padding-left: 0px;
+    text-align: left;
+    font-size: 12pt;
+    width: 200px;
+}
+
+.review{
+    padding-left: 10px;
+    padding-right: 3px;
+    text-align: left;
+    font-size: 20pt;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+    height: 1000px;
+}  
+
+.item-img{
+    padding-left: 100px;
+    position: fixed;
+}
+
+.item-name{
+    margin: auto;
+    font-size: 20pt;
+}
+
+.item-brand{
+    text-align: left;
+    padding-left: 12.5px;
+    padding-top: 10px;
+}
+
+.item-price{
+    text-decoration: overline;
+    font-size: 25pt;
+    padding-left: 12.5px;
+    padding-top: 10px;
+    text-align: left;
+    color: rgb(173, 21, 21);
+}
+
+.quantity{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.add-to-cart{
+    margin-left: 300px;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+.desciption{
+    text-align: left;
+}
+
+.features-title{
+    text-align: left;
+    font-size: 18pt;
+}
+
+.features{
+    text-align: left;
+    font-size: 15pt;
+}

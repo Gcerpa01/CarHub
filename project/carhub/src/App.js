@@ -7,7 +7,8 @@ import Account from './pages/account/account'
 import Messages from './pages/messages/messages'
 import ItemShop from './pages/itemshop'
 import Shop from './pages/shop'
-import Contact from './pages/contact';
+import Contact from './pages/contact'
+import Login from './pages/account/login'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path = "/shop" element = {<Shop />} />
           <Route path = "/itemshop" element = {<ItemShop />} />
           <Route path = "/contact" element = {<Contact />} />
+          <Route path = "/login" element = {<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
