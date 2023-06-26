@@ -25,7 +25,9 @@ export default function ItemShop() {
           <h3 class="features-title">Description</h3>
           <div class="description">
               <p>
-              If you’re looking for an exhaust that you can throw on, make your car sound insanely loud or quiet at anytime you want, along with giving it a nice look between all the exhaust tips you can choose from, this is a solid setup for your car.
+              If you’re looking for an exhaust that you can throw on, make your car sound insanely loud or quiet at anytime you want,
+               along with giving it a nice look between all the exhaust tips you can choose from, 
+               this is a solid setup for your car.
               </p>
             </div>
           </div>
@@ -36,6 +38,30 @@ export default function ItemShop() {
               <li>Aggressive Sound</li>
               <li>Higher Quality and Stronger Material</li>
               <li>Tips made from Titanium</li>
+            </div>
+          </div>
+          <br></br>
+          <div>
+            <h3 class="features-title">Specifications</h3>
+            <div class="features">
+              <li>Built from Titanium, including all components</li>
+              <li>This is a Full System, Not an Axle-Back</li>
+              <li>High Quality Welding</li>
+              <li>Adjustable 89mm Single Wall Tips w/ Bomiz Logo</li>
+              <li>Electronic Valves </li>
+              <li>HP and Torque Increase</li>
+            </div>
+          </div>
+          <br></br>
+          <div>
+            <h3 class="features-title">What's Included</h3>
+            <div class="features">
+              <li>Rear Mufflers + Connecting Pipes</li>
+              <li>X Pipe + Test Pipes</li>
+              <li>2x Remote Controls + Receiver</li>
+              <li>4x 89mm Tips</li>
+              <li>Necessary Hardware and Clamps </li>
+              <li>Installation Instructions</li>
             </div>
           </div>
         </div>

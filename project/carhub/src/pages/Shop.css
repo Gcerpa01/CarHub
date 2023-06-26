@@ -107,7 +107,7 @@
     width: 50%;
     float: left;
     padding: 20px;
-    border: 2px solid red;
+    border: none;
     height: 1000px;
 }  
 
@@ -119,6 +119,7 @@
 .item-name{
     margin: auto;
     font-size: 20pt;
+    font-family: "Raceline";
 }
 
 .item-brand{
@@ -145,8 +146,20 @@
 
 .add-to-cart{
     margin-left: 300px;
-    padding-left: 10px;
-    padding-right: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: crimson;
+    font-family: 'Raceline';
+}
+
+.add-to-cart:hover{
+    background-color: rgb(220, 51, 85);
+}
+
+.add-to-cart:active{
+    background-color: rgb(218, 82, 109);
 }
 
 .desciption{
@@ -154,6 +167,7 @@
 }
 
 .features-title{
+    font-family: 'Raceline';
     text-align: left;
     font-size: 18pt;
 }
