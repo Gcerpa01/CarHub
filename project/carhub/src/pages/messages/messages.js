@@ -5,11 +5,14 @@ import React, { useState, useEffect } from 'react';
 import groupsData from '../../db/subscribed_groups.json';
 
 export default function Messages() {
-  const [selectedOption, setSelectedOption] = useState('group 1');
+  const groups = groupsData.groups;
+
+  const [selectedOption, setSelectedOption] = useState(localStorage.getItem('selectedOption') || groups[0].name);
 
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    localStorage.setItem('selectedOption', option);
   };
 
   const renderOptionContent = () => {
