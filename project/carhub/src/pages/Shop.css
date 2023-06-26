@@ -57,3 +57,35 @@
     border: none;
     border-radius: 4px;
 }
+
+.reviews{
+    padding: 10px;
+    margin: auto;
+    width: 800px;
+    height: 350px;
+    position: center;
+    background-color: #494c51;
+    border: none;
+    border-radius: 4px;
+}
+
+.review-img{
+    border-top-left-radius: 50% 50%;
+    padding-left: 10px;
+    padding-right: 700px;
+    padding-top: 5px;
+}
+
+.review-name{
+    padding-left: 0px;
+    text-align: left;
+    font-size: 12pt;
+    width: 200px;
+}
+
+.review{
+    padding-left: 10px;
+    padding-right: 3px;
+    text-align: left;
+    font-size: 20pt;
+}
