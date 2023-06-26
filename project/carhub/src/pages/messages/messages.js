@@ -14,7 +14,7 @@ export default function Messages() {
 
   const renderOptionContent = () => {
     switch (selectedOption) {
-      case 'First Group':
+      case 'Ford':
         return (
           <div class="message-logs-container">
             <div class="list-group">
@@ -28,7 +28,7 @@ export default function Messages() {
             </div>
           </div>
         );
-      case 'Second Group':
+      case 'Kia':
         return (
           <div class="message-logs-container">
             <div class="list-group">
@@ -38,7 +38,7 @@ export default function Messages() {
             </div>
           </div>
         );
-      case 'Third Group':
+      case 'Tesla':
         return (
           <div class="message-logs-container">
             <div class="list-group">
