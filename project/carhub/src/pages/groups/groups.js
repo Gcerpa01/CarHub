@@ -50,7 +50,7 @@ export default function Groups() {
             <div class="search-box">
                 <form>
                     <div>
-                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} />
+                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} autocomplete="off"  />
                     </div>
                 </form>
 
