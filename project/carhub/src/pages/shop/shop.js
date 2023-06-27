@@ -2,6 +2,7 @@
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import './Shop.css';
+// putting comment to track changes
 
 export default function Shop() {
   return (
