@@ -20,7 +20,7 @@ export default function Shop() {
           <div class="col"> <button class="partButton"><a href="/Wheels">Wheels</a></button></div>
           <div class="col"> <button class="partButton"><a href="/engine">Engine</a></button></div>
           <div class="col"> <button class="partButton"><a href="/brakes">Brakes</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Intake</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/intake">Intake</a></button></div>
         </div>
       </div>
       <br></br>
