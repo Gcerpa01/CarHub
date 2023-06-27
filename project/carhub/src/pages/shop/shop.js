@@ -1,6 +1,6 @@
 
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 import './Shop.css';
 
 export default function Shop() {
@@ -16,8 +16,8 @@ export default function Shop() {
           <div class="col"> <button class="partButton"><a href="/styling">Styling</a></button></div>
           <div class="col"> <button class="partButton"><a href="/forced-induction">Forced Induction</a></button></div>
           <div class="col"> <button class="partButton"><a href="/suspension">Suspension</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Fueling</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Wheels</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/fueling">Fueling</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/Wheels">Wheels</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Tires</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Brakes</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Intake</a></button></div>

@@ -5,15 +5,17 @@ import Groups from './pages/groups/groups'
 import Home from './pages/home'
 import Account from './pages/account/account'
 import Messages from './pages/messages/messages'
-import ItemShop from './pages/itemshop'
-import Shop from './pages/shop'
+import ItemShop from './pages/shop/itemshop'
+import Shop from './pages/shop/shop'
 import Contact from './pages/contact'
 import Login from './pages/account/login'
-import Exhaust from './pages/exhaust'
-import ExhaustSystems from './pages/exhaust-systems'
-import Styling from './pages/styling'
-import ForcedInduction from './pages/forced-induction';
-import Suspension from './pages/suspension';
+import Exhaust from './pages/shop/exhaust'
+import ExhaustSystems from './pages/shop/exhaust-systems'
+import Styling from './pages/shop/styling'
+import ForcedInduction from './pages/shop/forced-induction';
+import Suspension from './pages/shop/suspension';
+import Fueling from './pages/shop/fueling';
+import Wheels from './pages/shop/Wheels';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path = "/styling" element = {<Styling />} />
           <Route path = "/forced-induction" element = {<ForcedInduction />} />
           <Route path = "/suspension" element = {<Suspension />} />
+          <Route path = "/fueling" element = {<Fueling />} />
+          <Route path = "/Wheels" element = {<Wheels />} />
         </Routes>
       </BrowserRouter>
     </div>
