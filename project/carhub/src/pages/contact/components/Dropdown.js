@@ -17,7 +17,7 @@ export default function Dropdown({dropdownText}) {
             <CDropdownItem onClick={changeText("Anthony")}>Anthony</CDropdownItem>
             <CDropdownItem onClick={changeText("Gerardo")}>Gerardo</CDropdownItem>
             <CDropdownItem onClick={changeText("Jacob")}>Jacob</CDropdownItem>
-            <CDropdownItem onClick={changeText("Jarrod")}>Jared</CDropdownItem>
+            <CDropdownItem onClick={changeText("Jarrod")}>Jarrod</CDropdownItem>
             <CDropdownItem onClick={changeText("Leo")}>Leo</CDropdownItem>
         </CDropdownMenu>
     </CDropdown>  )
