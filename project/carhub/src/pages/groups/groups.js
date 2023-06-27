@@ -1,127 +1,72 @@
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import Carousel from 'bootstrap/js/dist/carousel'; // Import the Carousel component from Bootstrap
+import Header from '../components/header'
+import Footer from '../components/footer'
+import './Shop.css';
 
-import './Groups.css'; // Assuming the CSS file is named "Header.css"
-
-import groupData from '../../db/groupData.json';
-import { isVisible } from '@testing-library/user-event/dist/utils';
-import { useState, useEffect } from 'react'; // Import the useEffect hook
-
-
-export default function Groups() {
-
-    const [searchValue, setSearchValue] = useState('');
-    const [filteredGroups, setFilteredGroups] = useState([]);
-
-    const showSearchContainer = searchValue !== '';
-
-
-    useEffect(() => {
-        // Initialize the carousel after the component has mounted
-        var carousel = new Carousel(document.getElementById('carousel-Groups'), {
-            interval: 5000,
-        });
-    }, []);
-
-    const userSearch = (e) => {
-        const value = e.target.value;
-        setSearchValue(value);
-        const filtered = groupData.groups.filter((group) => group.name.toLowerCase().includes(value.toLowerCase()));
-        setFilteredGroups(filtered);
-    };
-
-    const joinGroup = (group) => {
-        // Find the index of the group in the groupData array
-        const index = groupData.groups.findIndex((item) => item.name === group.name);
-      
-        if (index !== -1) {
-          groupData.groups[index].joined = true; // Update the joined property to true
-          setFilteredGroups([...groupData.groups]); // rerender
-        }
-
-      };
-      
-
-    return (
-        <>
-            <Header />
-
-            <div class="search-box">
-                <form>
-                    <div>
-                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} autocomplete="off"  />
-                    </div>
-                </form>
-
-                {showSearchContainer && (
-                    <div className="search-container" style={{ visibility: 'visible' }}>
-                        {/* Generate search results dynamically */}
-                        {filteredGroups.map((group, index) => (
-                            <div className="search-result-container" key={index}>
-                                <div className="search-result">
-                                    <text className="group-name">{group.name}</text>
-                                    <text className="group-members">Members: {group.members}</text>
-
-
-                                    {group.joined ? (<button className="join-button inactive">Joined</button>)
-                                        : (<button className="join-button" onClick={() => joinGroup(group)}>Join</button>)
-                                    }
-
-                                </div>
-                                <div className="rowDivider"></div>
-                            </div>
-                        ))}
-                    </div>
-                )}
-
+export default function ItemShop() {
+  return (
+    <div className="App">
+      <Header />
+      <div className="float-child">
+        <div className="item-img"><img src="BMW-Exhaust.jpg" class ="rounded" width ="500" height ="500"/></div>
+      </div>
+      <div className="float-child">
+        <div>
+          <h2 className="item-name">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3<br></br></h2>
+          <p className="item-brand">Bomiz</p>
+          <p className="item-brand">Part Number: (CH-FTX9)</p>
+          <p className="item-price">$5,800</p>
+          <div>
+            <button className="quantity">-</button>
+            <p className="quantity">Quantity: 1</p>
+            <button className="quantity">+</button>
+            <button className="add-to-cart">Add to Cart</button>
+          </div>
+          <div>
+          <h3 className="features-title">Description</h3>
+          <div className="description">
+              <p>
+              If you’re looking for an exhaust that you can throw on, make your car sound insanely loud or quiet at anytime you want,
+               along with giving it a nice look between all the exhaust tips you can choose from, 
+               this is a solid setup for your car.
+              </p>
             </div>
-
-            <div id="carousel-Groups" class="carousel" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    {groupData.groups.slice(0, 3).map((group, index) => (
-                        <div class={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                            <img src={group.image} class="group-image" alt="Group" />
-                            <div className="custom-caption">
-                                <h2 className="carousel-group-name">{group.name}</h2>
-                                <h3 className="carousel-group-members">members: {group.members}</h3>
-                                <div className="carousel-description"> <p>{group.summary}</p> </div>
-                                <p>
-
-
-                                    {group.joined ? <a class="btn btn-sm btn-primary align-items-center disabled" href="#">
-                                        Joined Group
-                                    </a>
-                                        : (<a class="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
-                                    Join Group </a>)
-                                    }
-
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-
-
-                </div>
-
-                <button class="carousel-control-prev " type="button" data-bs-target="#carousel-Groups" data-bs-slide="prev" >
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-Groups" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+          </div>
+          <div>
+            <h3 className="features-title">Features</h3>
+            <div className="features">
+              <li>Weight Savings</li>
+              <li>Aggressive Sound</li>
+              <li>Higher Quality and Stronger Material</li>
+              <li>Tips made from Titanium</li>
             </div>
-
-
-            <Footer />
-        </>
-    )
+          </div>
+          <br></br>
+          <div>
+            <h3 className="features-title">Specifications</h3>
+            <div className="features">
+              <li>Built from Titanium, including all components</li>
+              <li>This is a Full System, Not an Axle-Back</li>
+              <li>High Quality Welding</li>
+              <li>Adjustable 89mm Single Wall Tips w/ Bomiz Logo</li>
+              <li>Electronic Valves </li>
+              <li>HP and Torque Increase</li>
+            </div>
+          </div>
+          <br></br>
+          <div>
+            <h3 className="features-title">What's Included</h3>
+            <div className="features">
+              <li>Rear Mufflers + Connecting Pipes</li>
+              <li>X Pipe + Test Pipes</li>
+              <li>2x Remote Controls + Receiver</li>
+              <li>4x 89mm Tips</li>
+              <li>Necessary Hardware and Clamps </li>
+              <li>Installation Instructions</li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
