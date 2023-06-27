@@ -1,6 +1,6 @@
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import './Shop.css';
+import Header from '../../../components/header'
+import Footer from '../../../components/footer'
+import '.././Shop.css';
 
 export default function BCCoils() {
   return (

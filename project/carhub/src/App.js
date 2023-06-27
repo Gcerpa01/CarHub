@@ -5,24 +5,24 @@ import Groups from './pages/groups/groups'
 import Home from './pages/home'
 import Account from './pages/account/account'
 import Messages from './pages/messages/messages'
-import ItemShop from './pages/shop/itemshop'
+import ItemShop from './pages/shop/item-pages/itemshop'
 import Shop from './pages/shop/shop'
 import Contact from './pages/contact'
 import Login from './pages/account/login'
-import Exhaust from './pages/shop/exhaust'
+import Exhaust from './pages/shop/shop-categories/exhaust'
 import ExhaustSystems from './pages/shop/exhaust-systems'
-import Styling from './pages/shop/styling'
-import ForcedInduction from './pages/shop/forced-induction';
-import Suspension from './pages/shop/suspension';
-import Fueling from './pages/shop/fueling';
-import Wheels from './pages/shop/Wheels';
-import Engine from './pages/shop/engine';
-import Brakes from './pages/shop/brakes';
-import Intake from './pages/shop/intake';
-import Precision from './pages/shop/precision-turbo';
-import Te37 from './pages/shop/te37';
-import BCCoils from './pages/shop/bc-coils';
-import VLAND from './pages/shop/vland-headlights';
+import Styling from './pages/shop/shop-categories/styling'
+import ForcedInduction from './pages/shop/shop-categories/forced-induction';
+import Suspension from './pages/shop/shop-categories/suspension';
+import Fueling from './pages/shop/shop-categories/fueling';
+import Wheels from './pages/shop/shop-categories/Wheels';
+import Engine from './pages/shop/shop-categories/engine';
+import Brakes from './pages/shop/shop-categories/brakes';
+import Intake from './pages/shop/shop-categories/intake';
+import Precision from './pages/shop/item-pages/precision-turbo';
+import Te37 from './pages/shop/item-pages/te37';
+import BCCoils from './pages/shop/item-pages/bc-coils';
+import VLAND from './pages/shop/item-pages/vland-headlights';
 
 function App() {
   return (
