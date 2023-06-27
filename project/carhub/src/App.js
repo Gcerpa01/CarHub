@@ -9,7 +9,11 @@ import ItemShop from './pages/itemshop'
 import Shop from './pages/shop'
 import Contact from './pages/contact'
 import Login from './pages/account/login'
-
+import Exhaust from './pages/exhaust'
+import ExhaustSystems from './pages/exhaust-systems'
+import Styling from './pages/styling'
+import ForcedInduction from './pages/forced-induction';
+import Suspension from './pages/suspension';
 
 function App() {
   return (
@@ -25,6 +29,11 @@ function App() {
           <Route path = "/itemshop" element = {<ItemShop />} />
           <Route path = "/contact" element = {<Contact />} />
           <Route path = "/login" element = {<Login />} />
+          <Route path = "/exhaust" element = {<Exhaust />} />
+          <Route path = "/exhaust-systems" element = {<ExhaustSystems />} />
+          <Route path = "/styling" element = {<Styling />} />
+          <Route path = "/forced-induction" element = {<ForcedInduction />} />
+          <Route path = "/suspension" element = {<Suspension />} />
         </Routes>
       </BrowserRouter>
     </div>

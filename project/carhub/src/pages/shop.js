@@ -12,10 +12,10 @@ export default function Shop() {
       </div>
       <div class="container part-list">
         <div class="row row-cols-9">
-          <div class="col"> <button class="partButton"><a href="/itemshop">Exhaust</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Exterior</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Forced Induction</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Suspension</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/exhaust">Exhaust</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/styling">Styling</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/forced-induction">Forced Induction</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/suspension">Suspension</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Fueling</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Wheels</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Tires</a></button></div>

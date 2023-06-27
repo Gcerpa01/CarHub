@@ -16,9 +16,9 @@ export default function ItemShop() {
           <p class="item-brand">Part Number: (CH-FTX9)</p>
           <p class="item-price">$5,800</p>
           <div>
-            <button class="quantity">-</button>
-            <p class="quantity">Quantity: 1</p>
-            <button class="quantity">+</button>
+            <button onclick="decrement(-1)" class="quantity">-</button>
+            <p class="quantity" id="totalClicks">Quantity: 1</p>
+            <button onclick="increment(1)" class="quantity">+</button>
             <button class="add-to-cart">Add to Cart</button>
           </div>
           <div>
@@ -66,6 +66,14 @@ export default function ItemShop() {
           </div>
         </div>
       </div>
+      <script>
+        {/* function increment(click) {
+          var totalClicks = document.getElementById('totalClicks');
+        }
+        function decrement() {
+          document.getElementById('demoInput').stepDown();
+        } */}
+      </script>
       <Footer />
     </div>
   );
