@@ -17,6 +17,7 @@ import Suspension from './pages/shop/suspension';
 import Fueling from './pages/shop/fueling';
 import Wheels from './pages/shop/Wheels';
 import Engine from './pages/shop/engine';
+import Brakes from './pages/shop/brakes';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path = "/fueling" element = {<Fueling />} />
           <Route path = "/Wheels" element = {<Wheels />} />
           <Route path = "/engine" element = {<Engine />} />
+          <Route path = "/brakes" element = {<Brakes />} />
         </Routes>
       </BrowserRouter>
     </div>
