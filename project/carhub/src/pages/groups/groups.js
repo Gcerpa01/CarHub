@@ -34,14 +34,17 @@ export default function Groups() {
     const joinGroup = (group) => {
         // Find the index of the group in the groupData array
         const index = groupData.groups.findIndex((item) => item.name === group.name);
-      
+
         if (index !== -1) {
-          groupData.groups[index].joined = true; // Update the joined property to true
-          setFilteredGroups([...groupData.groups]); // rerender
+            groupData.groups[index].joined = true; // Update the joined property to true
+            const joinedGroup = groupData.groups[index]
+
+            setFilteredGroups([joinedGroup]); // rerender
+            userSearch({ target: { value: searchValue } });
         }
 
-      };
-      
+    };
+
 
     return (
         <>
@@ -50,7 +53,7 @@ export default function Groups() {
             <div class="search-box">
                 <form>
                     <div>
-                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} autocomplete="off"  />
+                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} autocomplete="off" />
                     </div>
                 </form>
 
@@ -98,7 +101,7 @@ export default function Groups() {
                                         Joined Group
                                     </a>
                                         : (<a class="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
-                                    Join Group </a>)
+                                            Join Group </a>)
                                     }
 
                                 </p>
