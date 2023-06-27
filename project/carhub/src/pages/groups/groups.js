@@ -5,7 +5,7 @@ import './Groups.css'; // Assuming the CSS file is named "Header.css"
 
 export default function Groups() {
     return (
-        <>
+        <div>
             <Header />
 
             <form>
@@ -57,6 +57,6 @@ export default function Groups() {
                 </button>
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
