@@ -19,6 +19,10 @@ import Wheels from './pages/shop/Wheels';
 import Engine from './pages/shop/engine';
 import Brakes from './pages/shop/brakes';
 import Intake from './pages/shop/intake';
+import Precision from './pages/shop/precision-turbo';
+import Te37 from './pages/shop/te37';
+import BCCoils from './pages/shop/bc-coils';
+import VLAND from './pages/shop/vland-headlights';
 
 function App() {
   return (
@@ -44,6 +48,10 @@ function App() {
           <Route path = "/engine" element = {<Engine />} />
           <Route path = "/brakes" element = {<Brakes />} />
           <Route path = "/intake" element = {<Intake />} />
+          <Route path = "/precision-turbo" element = {<Precision />} />
+          <Route path = "/te37" element = {<Te37 />} />
+          <Route path = "/bc-coils" element = {<BCCoils />} />
+          <Route path = "/vland-headlights" element = {<VLAND />} />
         </Routes>
       </BrowserRouter>
     </div>

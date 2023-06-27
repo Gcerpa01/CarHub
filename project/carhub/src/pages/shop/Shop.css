@@ -57,6 +57,11 @@
     display: block;
 }
 
+.part a{
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: none;
+}
+
 .part:hover{
     letter-spacing: 0.5px;
     color: white;
@@ -167,8 +172,9 @@
     background-color: rgb(218, 82, 109);
 }
 
-.desciption{
+.description{
     text-align: left;
+    font-size: 15pt;
 }
 
 .features-title{

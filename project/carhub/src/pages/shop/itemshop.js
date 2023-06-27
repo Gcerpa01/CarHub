@@ -14,7 +14,7 @@ export default function ItemShop() {
           <h2 class="item-name">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3<br></br></h2>
           <p class="item-brand">Bomiz</p>
           <p class="item-brand">Part Number: (CH-FTX9)</p>
-          <p class="item-price">$5,800</p>
+          <p class="item-price">$5,800.00</p>
           <div>
             <button onclick="decrement(-1)" class="quantity">-</button>
             <p class="quantity" id="totalClicks">Quantity: 1</p>

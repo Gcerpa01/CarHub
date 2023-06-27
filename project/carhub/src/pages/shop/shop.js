@@ -31,23 +31,23 @@ export default function Shop() {
         <div class="row gy-4">
           <div class="col-4">
             <button class="part"><a href="/itemshop"><img src="BMW-Exhaust.jpg" class ="rounded" width ="150" height ="150"/></a></button>
-            <button class="part"><div class="p-2">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3 (CH-FTX9)</div></button>
+            <button class="part"><a href="/itemshop"><div class="p-2">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3 (CH-FTX9)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="Precision-Turbo-6266.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">Precision Turbo Street & Race PT6266 CEA JB Turbocharger - 735WHP (CH-6266)</div></button>
+            <button class="part"><a href="/precision-turbo"><img src="Precision-Turbo-6266.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/precision-turbo"><div class="p-2">Precision Turbo Street & Race PT6266 CEA JB Turbocharger - 735WHP (CH-6266)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="TE37.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">Volk TE37 Saga Diamond Dark Gunmetal Wheel SET 18x9.5/5x114.3/+38 Offset (CH-8EDX)</div></button>
+            <button class="part"><a href="/te37"><img src="TE37.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/te37"><div class="p-2">Volk TE37 Saga Diamond Dark Gunmetal Wheel SET 18x9.5/5x114.3/+38 Offset (CH-8EDX)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="BC-Coils.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">BR Series Evo X Coilovers By BC Racing | 2008-2015 Mitsubishi Evo X (CH-20BR)</div></button>
+            <button class="part"><a href="/bc-coils"><img src="BC-Coils.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/bc-coils"><div class="p-2">BR Series Evo X Coilovers By BC Racing | 2008-2015 Mitsubishi Evo X (CH-20BR)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="VLAND-EvoX.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">2008-2017 Mitsubishi Evo X RGBW LED Boards (AUDI STYLE) VLAND Projectors (CH-EVLH)</div></button>
+            <button class="part"><a href="/vland-headlights"><img src="VLAND-EvoX.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/vland-headlights"><div class="p-2">2008-2017 Mitsubishi Evo X (AUDI STYLE) VLAND Projectors (CH-EVLH)</div></a></button>
           </div>
           <div class="col-4">
             <button class="part"><img src="ETS.jpg" class ="rounded" width ="150" height ="150"/></button>
