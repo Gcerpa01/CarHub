@@ -34,14 +34,17 @@ export default function Groups() {
     const joinGroup = (group) => {
         // Find the index of the group in the groupData array
         const index = groupData.groups.findIndex((item) => item.name === group.name);
-      
+
         if (index !== -1) {
-          groupData.groups[index].joined = true; // Update the joined property to true
-          setFilteredGroups([...groupData.groups]); // rerender
+            groupData.groups[index].joined = true; // Update the joined property to true
+            const joinedGroup = groupData.groups[index]
+
+            setFilteredGroups([joinedGroup]); // rerender
+            userSearch({ target: { value: searchValue } });
         }
 
-      };
-      
+    };
+
 
     return (
         <>
