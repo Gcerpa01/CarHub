@@ -18,7 +18,7 @@ export default function Shop() {
           <div class="col"> <button class="partButton"><a href="/suspension">Suspension</a></button></div>
           <div class="col"> <button class="partButton"><a href="/fueling">Fueling</a></button></div>
           <div class="col"> <button class="partButton"><a href="/Wheels">Wheels</a></button></div>
-          <div class="col"> <button class="partButton"><a href="/">Tires</a></button></div>
+          <div class="col"> <button class="partButton"><a href="/engine">Engine</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Brakes</a></button></div>
           <div class="col"> <button class="partButton"><a href="/">Intake</a></button></div>
         </div>

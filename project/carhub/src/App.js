@@ -16,6 +16,7 @@ import ForcedInduction from './pages/shop/forced-induction';
 import Suspension from './pages/shop/suspension';
 import Fueling from './pages/shop/fueling';
 import Wheels from './pages/shop/Wheels';
+import Engine from './pages/shop/engine';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path = "/suspension" element = {<Suspension />} />
           <Route path = "/fueling" element = {<Fueling />} />
           <Route path = "/Wheels" element = {<Wheels />} />
+          <Route path = "/engine" element = {<Engine />} />
         </Routes>
       </BrowserRouter>
     </div>
