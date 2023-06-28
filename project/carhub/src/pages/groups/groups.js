@@ -52,12 +52,15 @@ export default function Groups() {
 
             // Update the group's 'joined' property on the backend
             const groupId = group.id; // Assuming the group object has an 'id' property
-            fetch(`http://127.0.0.1:8000/groups/${groupId}/`, {
+            
+            console.log("group.id:",group.id);
+            console.log("Group info:",group.name);
+            fetch(`http://127.0.0.1:8000/groups/${groupId}.json`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ joined: true }),
+                body: JSON.stringify({id:group.id, name: group.name, members: group.members, description: group.description, joined: true, image: group.image }),
             })
                 .then(response => {
                     if (response.ok) {
