@@ -11,36 +11,36 @@ export default function Engine() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><a href="/exhaust-systems"><img src="cooling.jpg" class="rounded" width="150" height="150" /></a></button>
-            <button class="part"><div class="p-2">Cooling System Components</div></button>
+            <button class="part"><a href="/error"><img src="cooling.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Cooling System Components</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="cylinder-head.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Cylinder Heads & Valvetrain</div></button>
+            <button class="part"><a href="/error"><img src="cylinder-head.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Cylinder Heads & Valvetrain</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="engine-internals.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Engine Internals & Assemblies</div></button>
+            <button class="part"><a href="/error"><img src="engine-internals.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Engine Internals & Assemblies</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="oilfilter.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Engine Oil & Filters</div></button>
+            <button class="part"><a href="/error"><img src="oilfilter.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Engine Oil & Filters</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="gasket.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Gaskets & Seals</div></button>
+            <button class="part"><a href="/error"><img src="gasket.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Gaskets & Seals</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="EngineMounts.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Motor Mounts</div></button>
+            <button class="part"><a href="/error"><img src="EngineMounts.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Motor Mounts</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="OilCooling.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Oil System Components</div></button>
+            <button class="part"><a href="/error"><img src="OilCooling.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Oil System Components</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="TimingBelt.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Timing Components</div></button>
+            <button class="part"><a href="/error"><img src="TimingBelt.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Timing Components</div></a></button>
           </div>
         </div>
         <br></br>

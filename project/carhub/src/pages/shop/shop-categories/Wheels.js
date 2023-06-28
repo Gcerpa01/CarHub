@@ -11,139 +11,139 @@ export default function Wheels() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="anovia.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="anovia.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="advan.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="advan.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="aodhan.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="aodhan.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="ambit.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="ambit.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="avant-garde.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="avant-garde.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="avid1.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="avid1.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="bbs.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="bbs.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="curva.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="curva.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="drifz.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="drifz.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="enkei.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="enkei.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="esr.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="esr.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="eurotek.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="eurotek.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="fifteen.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="fifteen.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="gramlight.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="gramlight.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="hre.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="hre.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="kansei.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="kansei.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="konig.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="konig.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="method.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="method.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="motegi.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="motegi.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="motiv.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="motiv.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="mrr.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="mrr.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="mst.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="mst.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="niche.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="niche.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="neuspeed.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="neuspeed.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="options.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="options.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="primax.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="primax.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="raceline100.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="raceline100.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="revolution.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="revolution.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="rohana.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="rohana.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="rotiform.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="rotiform.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="spec1.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="spec1.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="ssr.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="ssr.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="stage.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="stage.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="stance.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="stance.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="3sdm.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="3sdm.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="tsw.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="tsw.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="drw.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="drw.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="versus.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="versus.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="vmr.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="vmr.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="volk.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="volk.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="vors.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="vors.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="vorsteiner.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="vorsteiner.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="weld.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="weld.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="xxr.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="xxr.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
           <div class="col-4">
-            <button class="wheels"><a href="/"><img src="969.jpg" class="rounded" width="350" height="100" /></a></button>
+            <button class="wheels"><a href="/error"><img src="969.jpg" class="rounded" width="350" height="100" /></a></button>
           </div>
         </div>
         <br></br>

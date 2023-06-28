@@ -11,24 +11,24 @@ export default function Suspension() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><a href="/exhaust-systems"><img src="alignment.jpg" class="rounded" width="150" height="150" /></a></button>
-            <button class="part"><div class="p-2">Alignment Components & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="alignment.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Alignment Components & Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="coilover.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Coilovers</div></button>
+            <button class="part"><a href="/error"><img src="coilover.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Coilovers</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="swaybar.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Swaybars & End Links</div></button>
+            <button class="part"><a href="/error"><img src="swaybar.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Swaybars & End Links</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="rollcage.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Roll Cages, Chassis Braces & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="rollcage.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Roll Cages, Chassis Braces & Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="SuspensionComp.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Performance Suspension</div></button>
+            <button class="part"><a href="/error"><img src="SuspensionComp.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Performance Suspension</div></a></button>
           </div>
         </div>
         <br></br>

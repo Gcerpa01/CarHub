@@ -11,28 +11,28 @@ export default function ForcedInduction() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><a href="/exhaust-systems"><img src="BOV.jpg" class="rounded" width="150" height="150" /></a></button>
-            <button class="part"><div class="p-2">Blow Off Valves & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="BOV.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Blow Off Valves & Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="BoostControl.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Boost Controllers</div></button>
+            <button class="part"><a href="/error"><img src="BoostControl.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Boost Controllers</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="intercoolers.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Intercoolers & Piping</div></button>
+            <button class="part"><a href="/error"><img src="intercoolers.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Intercoolers & Piping</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="Supercharger.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Supercharger Systems & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="Supercharger.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Supercharger Systems & Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="Turbo.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Turbochargers, Kits & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="Turbo.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Turbochargers, Kits & Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="Wastegate.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Wastegates & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="Wastegate.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Wastegates & Accessories</div></a></button>
           </div>
         </div>
         <br></br>
