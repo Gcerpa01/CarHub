@@ -11,28 +11,28 @@ export default function Brakes() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><a href="/exhaust-systems"><img src="rotor.jpg" class="rounded" width="150" height="150" /></a></button>
-            <button class="part"><div class="p-2">Brake Rotors</div></button>
+            <button class="part"><a href="/error"><img src="rotor.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Brake Rotors</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="brake-pad.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Performance Brake Pads</div></button>
+            <button class="part"><a href="/error"><img src="brake-pad.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Performance Brake Pads</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="brake-fluid.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">High Performance Brake Fluids</div></button>
+            <button class="part"><a href="/error"><img src="brake-fluid.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">High Performance Brake Fluids</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="brake-line.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Brake Lines</div></button>
+            <button class="part"><a href="/error"><img src="brake-line.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Brake Lines</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="bbk.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Big Brake Kits Performance Upgrades</div></button>
+            <button class="part"><a href="/error"><img src="bbk.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Big Brake Kits Performance Upgrades</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="brake-kit.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Brake Packages - Upgrade Kits</div></button>
+            <button class="part"><a href="/error"><img src="brake-kit.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Brake Packages - Upgrade Kits</div></a></button>
           </div>
         </div>
         <br></br>

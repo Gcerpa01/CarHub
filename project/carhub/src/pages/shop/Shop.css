@@ -202,3 +202,21 @@
     border-radius: 4px;
     display: block;
 }
+
+.backbutton{
+    margin: auto;
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: crimson;
+    font-family: 'Raceline';
+}
+
+.backbutton:hover{
+    background-color: rgb(220, 51, 85);
+}
+
+.backbutton:active{
+    background-color: rgb(218, 82, 109);
+}

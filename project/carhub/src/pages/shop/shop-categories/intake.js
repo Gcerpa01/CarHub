@@ -11,16 +11,16 @@ export default function Intake() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><a href="/exhaust-systems"><img src="air-induction.jpg" class="rounded" width="150" height="150" /></a></button>
-            <button class="part"><div class="p-2">Air Induction</div></button>
+            <button class="part"><a href="/error"><img src="air-induction.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Air Induction</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="intake-manifold.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Intake Manifolds & Accessories</div></button>
+            <button class="part"><a href="/error"><img src="intake-manifold.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Intake Manifolds & Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="throttle-body.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Throttle Bodies & Gaskets</div></button>
+            <button class="part"><a href="/error"><img src="throttle-body.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Throttle Bodies & Gaskets</div></a></button>
           </div>
         </div>
         <br></br>

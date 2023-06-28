@@ -15,36 +15,36 @@ export default function ExhaustSystems() {
             <button class="part"><a href="/itemshop"><div class="p-2">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3 (CH-FTX9)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">"Part Name" (CH-"Part Number")</div></button>
+            <button class="part"><a href="/error"><img src="place-holder.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">"Part Name" (CH-"Part Number")</div></a></button>
           </div>
         </div>
         <br></br>

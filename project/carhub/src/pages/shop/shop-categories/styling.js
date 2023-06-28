@@ -11,28 +11,28 @@ export default function Styling() {
     </div><div class="container overflow-hidden text-center">
         <div class="row gy-4">
           <div class="col-4">
-            <button class="part"><a href="/exhaust-systems"><img src="accessories.jpg" class="rounded" width="150" height="150" /></a></button>
-            <button class="part"><div class="p-2">Exterior Styling Accessories</div></button>
+            <button class="part"><a href="/error"><img src="accessories.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Exterior Styling Accessories</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="interior.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Automotive Interior Parts</div></button>
+            <button class="part"><a href="/error"><img src="interior.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Automotive Interior Parts</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="wing.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Hoods, Spoilers & Body Panels</div></button>
+            <button class="part"><a href="/error"><img src="wing.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Hoods, Spoilers & Body Panels</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="lighting.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Automotive Lighting</div></button>
+            <button class="part"><a href="/error"><img src="lighting.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Automotive Lighting</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="dress-up.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Engine Dress-Up</div></button>
+            <button class="part"><a href="/error"><img src="dress-up.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Engine Dress-Up</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="detailing.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Car Detailing & Care</div></button>
+            <button class="part"><a href="/error"><img src="detailing.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Car Detailing & Care</div></a></button>
           </div>
         </div>
         <br></br>

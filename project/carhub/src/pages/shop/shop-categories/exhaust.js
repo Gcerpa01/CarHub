@@ -27,12 +27,12 @@ export default function Exhaust() {
             <button class="part"><a href="/o2-housings"><div class="p-2">O2 Housings & Turbo Outlets</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="muffler.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Mufflers & Resonators</div></button>
+            <button class="part"><a href="/error"><img src="muffler.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Mufflers & Resonators</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="gaskets.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Exhaust Gaskets & Hardware</div></button>
+            <button class="part"><a href="/error"><img src="gaskets.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/error"><div class="p-2">Exhaust Gaskets & Hardware</div></a></button>
           </div>
         </div>
         <br></br>

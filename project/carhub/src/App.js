@@ -33,6 +33,7 @@ import Downpipes from './pages/shop/category-items/downpipes';
 import ETSDownpipe from './pages/shop/item-pages/ets-downpipe';
 import O2Housings from './pages/shop/category-items/o2-housings';
 import TomeiOutlet from './pages/shop/item-pages/tomei-outlet';
+import Error from './pages/shop/error';
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
           <Route path = "/ets-downpipe" element = {<ETSDownpipe />} />
           <Route path = "/o2-housings" element = {<O2Housings />} />
           <Route path = "/tomei-outlet" element = {<TomeiOutlet />} />
+          <Route path = "/error" element = {<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
