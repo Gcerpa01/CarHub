@@ -2,13 +2,26 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import './Messages.css'; // Assuming the CSS file is named "Header.css"
 import React, { useState, useEffect } from 'react';
-import groupsData from '../../db/subscribed_groups.json';
 
 export default function Messages() {
-  const groups = groupsData.groups;
 
-  const [selectedOption, setSelectedOption] = useState(localStorage.getItem('selectedOption') || groups[0].name);
+  const [selectedOption, setSelectedOption] = useState(localStorage.getItem('selectedOption'));
 
+  const [groupsData,setGroupsData] = useState([])
+
+
+  useEffect(() => {  
+        // Fetch data from the API endpoint
+        fetch('http://127.0.0.1:8000/groups.json')
+            .then(response => response.json())
+            .then(data => {
+              const filteredGroups = data.groups.filter(group => group.joined === true);
+              setGroupsData(filteredGroups)
+            })
+            .catch(error => {
+                console.error('Error fetching group data:', error);
+            });
+  }, []);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -75,7 +88,7 @@ export default function Messages() {
           {/* Making Groups on left side */}
           <div className="groups-container">
 
-            {groupsData.groups.map((group, index) => (
+            {groupsData.map((group, index) => (
               <button
                 key={index}
                 className={selectedOption === group.name ? 'active' : ''}
