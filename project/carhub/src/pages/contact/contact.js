@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import Send from './components/Send'
@@ -5,6 +6,41 @@ import './contact.css'
 import Dropdown from './components/Dropdown';
 
 export default function Contact() {
+
+  const [dropdownItems, setDropdownMenuItem] = useState([
+    {
+      id: 1,
+      name: "Anthony",
+      email: "avasquez@carhub.com",
+    },
+    {
+      id: 2,
+      name: "Gerardo",
+      email: "gcerpa@carhub.com",
+    },
+    {
+      id: 3,
+      name: "Jacob",
+      email: "jhosburg@carhub.com",
+    },
+    {
+      id: 4,
+      name: "Jarrod",
+      email: "jrowson@carhub.com",
+    },
+    {
+      id: 5,
+      name: "Leo",
+      email: "lroacho@carhub.com",
+    },
+  ])
+
+  var dropdownText = "Who would you like to contact?"
+
+  function changeDropdownText(newText){
+      dropdownText = newText
+  }
+
   return (
     <div className="App">
       <Header />
@@ -26,7 +62,10 @@ export default function Contact() {
             </div>
             <br/>
             <div className='flexbox'>
-              <Dropdown/>
+              <Dropdown 
+              dropdownItems={dropdownItems}
+              dropdownText={dropdownText} 
+              changeDropdownText={changeDropdownText}/>
             </div>
             <br/>
             <div className="form-group">

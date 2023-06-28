@@ -4,25 +4,20 @@ import { CDropdownHeader } from '@coreui/react';
 import { CDropdownItem } from '@coreui/react';
 import { CDropdownItemPlain } from '@coreui/react';
 import { CDropdownToggle } from '@coreui/react';
+import { PropTypes } from 'react';
 
-export default function Dropdown({dropdownText}) {
-    
-  function changeText({inputText}){
-    dropdownText = inputText
-  }
+export default function Dropdown({dropdownItems, dropdownText, changeDropdownText}) {
+
     return (
     <CDropdown>
         <CDropdownToggle color="warning">{dropdownText}</CDropdownToggle>
         <CDropdownMenu>
-            <CDropdownItem onClick={changeText("Anthony")}>Anthony</CDropdownItem>
-            <CDropdownItem onClick={changeText("Gerardo")}>Gerardo</CDropdownItem>
-            <CDropdownItem onClick={changeText("Jacob")}>Jacob</CDropdownItem>
-            <CDropdownItem onClick={changeText("Jarrod")}>Jarrod</CDropdownItem>
-            <CDropdownItem onClick={changeText("Leo")}>Leo</CDropdownItem>
+            {dropdownItems.map((dropdownItem)=>
+            (<CDropdownItem 
+            key={dropdownItem.id} 
+            onClick={()=>changeDropdownText(dropdownItem.name)}>
+                {dropdownItem.name}
+            </CDropdownItem>))}
         </CDropdownMenu>
     </CDropdown>  )
-}
-
-Dropdown.defaultProps = {
-    dropdownText: "Who would you like to contact?",
 }
