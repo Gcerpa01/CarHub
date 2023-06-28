@@ -1,7 +1,39 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
+import { useState } from 'react';
 
 export default function Home() {
+
+  let [products, setProducts] = useState([
+    {
+      id: 4,
+      image: `./TE37.jpg`,
+      title: `ADD some spicy wheels for your car`,
+      description: `Volk TE37 Saga Diamond Dark Gunmetal Wheel SET 18x9.5/5x114.3/+38 Offset (CH-8EDX)`
+    },
+    {
+      id: 5,
+      image: `./BC-Coils.jpg`,
+      title: `Add some performance suspension to your car`,
+      description: `BR Series Evo X Coilovers By BC Racing | 2008-2015 Mitsubishi Evo X (CH-20BR)`
+    },
+    {
+      id: 6,
+      image: `./VLAND-EvoX.jpg`,
+      title: `Update your Headlights`,
+      description: `2008-2017 Mitsubishi Evo X RGBW LED Boards (AUDI STYLE) VLAND Projectors (CH-EVLH)`,
+    },
+  ]);
+
+  // When someone clicks the Learn More Button, it will take them to the shop page
+  const goToShop = (e) => {
+    // We use the window API to get the origin of the current domain
+    // On local this is http://localhost:3000/
+    // On production it might be different,
+    // So we use window.location.origin
+    window.location.href = `${window.location.origin}/shop`;
+  }
+
   return (
     <div className="App">
       <Header />
@@ -16,7 +48,8 @@ export default function Home() {
     <section className="container">
       <h2 className="text-center">Featured Products</h2>
       <div className="row">
-        <div className="col-lg-4">
+        {/* We were rendering the same column over and over again while changing the inner content */}
+        {/* <div className="col-lg-4">
           <div className="card">
             <img className="card-img-top" src="ford1.png" alt="2023 Ford Mustang"></img>
             <div className="card-body">
@@ -37,16 +70,37 @@ export default function Home() {
           </div>
         </div>
         <div className="col-lg-4">
-            <div className="card">
-              <img className="card-img-top" src="infit.webp" alt="2023 Infiniti Q50"></img>
-              <div className="card-body">
-                <h3 className="card-title">2023 Infiniti Q50</h3>
-                <p className="card-text">The 2023 Infiniti Q50 is a luxury sports sedan that combines style, performance, and advanced technology. With its sleek and aggressive design, it exudes a sense of elegance and athleticism on the road.</p>
-                <button className="btn btn-primary">Learn More</button>
-              </div>
+          <div className="card">
+            <img className="card-img-top" src="infit.webp" alt="2023 Infiniti Q50"></img>
+            <div className="card-body">
+              <h3 className="card-title">2023 Infiniti Q50</h3>
+              <p className="card-text">The 2023 Infiniti Q50 is a luxury sports sedan that combines style, performance, and advanced technology. With its sleek and aggressive design, it exudes a sense of elegance and athleticism on the road.</p>
+              <button className="btn btn-primary">Learn More</button>
             </div>
           </div>
-        </div>  
+        </div> */}
+
+        {/* Instead, the Reactive way, is to store those products in data, and then loop over it */}
+        {/* First we check if we have products */}
+        {/* We have 3 Products currently, so this loop will run 3 times */}
+        {products.length > 0 && products.map((product, productIndex) => {
+            return ( // Will render the a column for each product
+              <div id={product.id} className="col-lg-4" key={productIndex}>
+                <div className="card">
+                  <img className="card-img-top" src={product.image} alt={product.title}></img>
+                  <div className="card-body">
+                    <h3 className="card-title">{product.title}</h3>
+                    <p className="card-text">{product.description}</p>
+                    {/* Ternerary Operator // One Line If Else Statement */}
+                    {/* Adding a function which will catch when the user clicks this button */}
+                    <button onClick={(e) => goToShop(e)} className="btn btn-primary">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }  
+      </div>  
     </section>
 
   <section className="sponsors">
@@ -54,13 +108,13 @@ export default function Home() {
     <div className="container">
       <div className="row">
         <div className="col-sm-4">
-          <img src="Ford.png" alt="Car 1" style={{width: "40%", height: "auto"}}></img>
+          <img src="./vland-logo.png" alt="Vland" style={{width: "40%", height: "auto"}}></img>
         </div>
         <div className="col-sm-4">
-          <img src="toyota.png" alt="Car 2" style={{width: "40%", height: "auto"}}></img>
+          <img src="./bc-coils-logo.png" alt="BC Coils" style={{width: "40%", height: "auto"}}></img>
         </div>
         <div className="col-sm-4">
-          <img src="infinity.png" alt="Car 3" style={{width: "60%", height: "auto"}}></img>
+          <img src="./rays-te37.png" alt="Rays" style={{width: "60%", height: "auto"}}></img>
         </div>
       </div>
     </div>
