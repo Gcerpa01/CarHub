@@ -14,7 +14,7 @@ def group_list(request,format=None):
     if request.method == 'GET':
         list_of_groups = Group.objects.all()
         serializer = GroupSerializer(list_of_groups,many=True)
-        return Response(serializer.data)
+        return Response({"groups": serializer.data})
     
     if request.method == 'POST':
         serializer = GroupSerializer(data=request.data)
@@ -32,7 +32,7 @@ def group_detail(request,id,format=None):
     
     if request.method == 'GET':
         serializer = GroupSerializer(group)
-        return Response(serializer.data)
+        return Response({"groups": serializer.data})
 
     elif request.method == 'PUT':
         serializer = GroupSerializer(group,data=request.data)

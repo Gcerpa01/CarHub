@@ -1,21 +1,29 @@
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import Carousel from 'bootstrap/js/dist/carousel'; // Import the Carousel component from Bootstrap
-
-import './Groups.css'; // Assuming the CSS file is named "Header.css"
-
-import groupData from '../../db/groupData.json';
-import { isVisible } from '@testing-library/user-event/dist/utils';
-import { useState, useEffect } from 'react'; // Import the useEffect hook
-
+import Header from '../../components/header';
+import Footer from '../../components/footer';
+import Carousel from 'bootstrap/js/dist/carousel';
+import './Groups.css';
+import { useState, useEffect } from 'react';
 
 export default function Groups() {
-
     const [searchValue, setSearchValue] = useState('');
     const [filteredGroups, setFilteredGroups] = useState([]);
+    const [groupData, setGroupData] = useState([]);
 
     const showSearchContainer = searchValue !== '';
 
+    useEffect(() => {
+        // Fetch data from the API endpoint
+        fetch('http://127.0.0.1:8000/groups.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                setGroupData(data.groups);
+                setFilteredGroups(data.groups);
+            })
+            .catch(error => {
+                console.error('Error fetching group data:', error);
+            });
+    }, []);
 
     useEffect(() => {
         // Initialize the carousel after the component has mounted
@@ -27,22 +35,41 @@ export default function Groups() {
     const userSearch = (e) => {
         const value = e.target.value;
         setSearchValue(value);
-        const filtered = groupData.groups.filter((group) => group.name.toLowerCase().includes(value.toLowerCase()));
+        const filtered = groupData.filter((group) =>
+            group.name.toLowerCase().includes(value.toLowerCase())
+        );
         setFilteredGroups(filtered);
     };
 
     const joinGroup = (group) => {
-        // Find the index of the group in the groupData array
-        const index = groupData.groups.findIndex((item) => item.name === group.name);
-
+        const index = groupData.findIndex((item) => item.name === group.name);
         if (index !== -1) {
-            groupData.groups[index].joined = true; // Update the joined property to true
-            const joinedGroup = groupData.groups[index]
-
-            setFilteredGroups([joinedGroup]); // rerender
+            const updatedGroupData = [...groupData];
+            updatedGroupData[index].joined = true;
+            setGroupData(updatedGroupData);
+            setFilteredGroups([updatedGroupData[index]]);
             userSearch({ target: { value: searchValue } });
-        }
 
+            // Update the group's 'joined' property on the backend
+            const groupId = group.id; // Assuming the group object has an 'id' property
+            fetch(`http://127.0.0.1:8000/groups/${groupId}/`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ joined: true }),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Group updated successfully.');
+                    } else {
+                        console.error('Failed to update group:', response.status);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error updating group:', error);
+                });
+        }
     };
 
 
@@ -53,35 +80,47 @@ export default function Groups() {
             <div className="search-box">
                 <form>
                     <div>
+<<<<<<< Updated upstream
                         <input type="text" id="group_search" className="form-control" placeholder="Search for group" onChange={userSearch} autoComplete="off" />
+=======
+                        <input
+                            type="text"
+                            id="group_search"
+                            className="form-control"
+                            placeholder="Search for group"
+                            onChange={userSearch}
+                            autoComplete="off"
+                        />
+>>>>>>> Stashed changes
                     </div>
                 </form>
 
                 {showSearchContainer && (
                     <div className="search-container" style={{ visibility: 'visible' }}>
-                        {/* Generate search results dynamically */}
                         {filteredGroups.map((group, index) => (
                             <div className="search-result-container" key={index}>
                                 <div className="search-result">
                                     <text className="group-name">{group.name}</text>
                                     <text className="group-members">Members: {group.members}</text>
 
-
-                                    {group.joined ? (<button className="join-button inactive">Joined</button>)
-                                        : (<button className="join-button" onClick={() => joinGroup(group)}>Join</button>)
-                                    }
-
+                                    {group.joined ? (
+                                        <button className="join-button inactive">Joined</button>
+                                    ) : (
+                                        <button className="join-button" onClick={() => joinGroup(group)}>
+                                            Join
+                                        </button>
+                                    )}
                                 </div>
                                 <div className="rowDivider"></div>
                             </div>
                         ))}
                     </div>
                 )}
-
             </div>
 
             <div id="carousel-Groups" className="carousel" data-bs-ride="carousel">
                 <div className="carousel-indicators">
+<<<<<<< Updated upstream
                     <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -89,12 +128,37 @@ export default function Groups() {
                 <div className="carousel-inner">
                     {groupData.groups.slice(0, 3).map((group, index) => (
                         <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+=======
+                    {groupData && groupData.slice(0, 3).map((group, index) => (
+                        <button
+                            type="button"
+                            data-bs-target="#carousel-Groups"
+                            data-bs-slide-to={index}
+                            className={index === 0 ? 'active' : ''}
+                            aria-current={index === 0 ? 'true' : 'false'}
+                            aria-label={`Slide ${index + 1}`}
+                            key={index}
+                        ></button>
+                    ))}
+                </div>
+                <div className="carousel-inner">
+                    {groupData && groupData.slice(0, 3).map((group, index) => (
+                        <div
+                            className={`carousel-item ${index === 0 ? 'active' : ''}`}
+                            key={index}
+                        >
+>>>>>>> Stashed changes
                             <img src={group.image} className="group-image" alt="Group" />
                             <div className="custom-caption">
                                 <h2 className="carousel-group-name">{group.name}</h2>
-                                <h3 className="carousel-group-members">members: {group.members}</h3>
-                                <div className="carousel-description"> <p>{group.summary}</p> </div>
+                                <h3 className="carousel-group-members">
+                                    members: {group.members}
+                                </h3>
+                                <div className="carousel-description">
+                                    <p>{group.description}</p>
+                                </div>
                                 <p>
+<<<<<<< Updated upstream
 
 
                                     {group.joined ? <a className="btn btn-sm btn-primary align-items-center disabled" href="#">
@@ -104,27 +168,53 @@ export default function Groups() {
                                             Join Group </a>)
                                     }
 
+=======
+                                    {group.joined ? (
+                                        <a className="btn btn-sm btn-primary align-items-center disabled" href="#">
+                                            Joined Group
+                                        </a>
+                                    ) : (
+                                        <a className="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
+                                            Join Group
+                                        </a>
+                                    )}
+>>>>>>> Stashed changes
                                 </p>
                             </div>
                         </div>
                     ))}
-
-
                 </div>
 
+<<<<<<< Updated upstream
                 <button className="carousel-control-prev " type="button" data-bs-target="#carousel-Groups" data-bs-slide="prev" >
+=======
+                <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel-Groups"
+                    data-bs-slide="prev"
+                >
+>>>>>>> Stashed changes
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
                 </button>
 
+<<<<<<< Updated upstream
                 <button className="carousel-control-next" type="button" data-bs-target="#carousel-Groups" data-bs-slide="next">
+=======
+                <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carousel-Groups"
+                    data-bs-slide="next"
+                >
+>>>>>>> Stashed changes
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
 
-
             <Footer />
         </>
-    )
+    );
 }
