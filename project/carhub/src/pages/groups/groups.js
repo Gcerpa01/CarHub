@@ -80,9 +80,6 @@ export default function Groups() {
             <div className="search-box">
                 <form>
                     <div>
-<<<<<<< Updated upstream
-                        <input type="text" id="group_search" className="form-control" placeholder="Search for group" onChange={userSearch} autoComplete="off" />
-=======
                         <input
                             type="text"
                             id="group_search"
@@ -91,7 +88,6 @@ export default function Groups() {
                             onChange={userSearch}
                             autoComplete="off"
                         />
->>>>>>> Stashed changes
                     </div>
                 </form>
 
@@ -120,15 +116,6 @@ export default function Groups() {
 
             <div id="carousel-Groups" className="carousel" data-bs-ride="carousel">
                 <div className="carousel-indicators">
-<<<<<<< Updated upstream
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div className="carousel-inner">
-                    {groupData.groups.slice(0, 3).map((group, index) => (
-                        <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-=======
                     {groupData && groupData.slice(0, 3).map((group, index) => (
                         <button
                             type="button"
@@ -147,7 +134,6 @@ export default function Groups() {
                             className={`carousel-item ${index === 0 ? 'active' : ''}`}
                             key={index}
                         >
->>>>>>> Stashed changes
                             <img src={group.image} className="group-image" alt="Group" />
                             <div className="custom-caption">
                                 <h2 className="carousel-group-name">{group.name}</h2>
@@ -158,17 +144,6 @@ export default function Groups() {
                                     <p>{group.description}</p>
                                 </div>
                                 <p>
-<<<<<<< Updated upstream
-
-
-                                    {group.joined ? <a className="btn btn-sm btn-primary align-items-center disabled" href="#">
-                                        Joined Group
-                                    </a>
-                                        : (<a className="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
-                                            Join Group </a>)
-                                    }
-
-=======
                                     {group.joined ? (
                                         <a className="btn btn-sm btn-primary align-items-center disabled" href="#">
                                             Joined Group
@@ -178,37 +153,28 @@ export default function Groups() {
                                             Join Group
                                         </a>
                                     )}
->>>>>>> Stashed changes
                                 </p>
                             </div>
                         </div>
                     ))}
                 </div>
 
-<<<<<<< Updated upstream
-                <button className="carousel-control-prev " type="button" data-bs-target="#carousel-Groups" data-bs-slide="prev" >
-=======
                 <button
                     className="carousel-control-prev"
                     type="button"
                     data-bs-target="#carousel-Groups"
                     data-bs-slide="prev"
                 >
->>>>>>> Stashed changes
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
                 </button>
 
-<<<<<<< Updated upstream
-                <button className="carousel-control-next" type="button" data-bs-target="#carousel-Groups" data-bs-slide="next">
-=======
                 <button
                     className="carousel-control-next"
                     type="button"
                     data-bs-target="#carousel-Groups"
                     data-bs-slide="next"
                 >
->>>>>>> Stashed changes
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
