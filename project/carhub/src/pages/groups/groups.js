@@ -10,7 +10,7 @@ export default function Groups() {
     const [groupData, setGroupData] = useState([]);
 
     const showSearchContainer = searchValue !== '';
-
+    
     useEffect(() => {
         // Fetch data from the API endpoint
         fetch('http://127.0.0.1:8000/groups.json')

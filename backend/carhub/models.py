@@ -33,4 +33,4 @@ class Message(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name + self.group
+        return self.name + ' ' + self.group
