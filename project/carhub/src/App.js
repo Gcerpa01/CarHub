@@ -27,6 +27,12 @@ import ETSIntercooler from './pages/shop/item-pages/ets-intercooler';
 import ETSIntake from './pages/shop/item-pages/ets-intake';
 import ETSTurboKit from './pages/shop/item-pages/ets-turbo-kit';
 import FuelInjectors from './pages/shop/item-pages/fuel-injectors';
+import ManifoldsHeaders from './pages/shop/category-items/manifolds-headers';
+import SheepeyManifold from './pages/shop/item-pages/sheepey-manifold';
+import Downpipes from './pages/shop/category-items/downpipes';
+import ETSDownpipe from './pages/shop/item-pages/ets-downpipe';
+import O2Housings from './pages/shop/category-items/o2-housings';
+import TomeiOutlet from './pages/shop/item-pages/tomei-outlet';
 
 function App() {
   return (
@@ -60,6 +66,12 @@ function App() {
           <Route path = "/ets-intake" element = {<ETSIntake />} />
           <Route path = "/ets-turbo-kit" element = {<ETSTurboKit />} />
           <Route path = "/fuel-injectors" element = {<FuelInjectors />} />
+          <Route path = "/manifolds-headers" element = {<ManifoldsHeaders />} />
+          <Route path = "/sheepey-manifold" element = {<SheepeyManifold />} />
+          <Route path = "/downpipes" element = {<Downpipes />} />
+          <Route path = "/ets-downpipe" element = {<ETSDownpipe />} />
+          <Route path = "/o2-housings" element = {<O2Housings />} />
+          <Route path = "/tomei-outlet" element = {<TomeiOutlet />} />
         </Routes>
       </BrowserRouter>
     </div>

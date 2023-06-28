@@ -15,16 +15,16 @@ export default function Exhaust() {
             <button class="part"><div class="p-2">Exhaust Systems</div></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="manifolds.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Manifolds & Headers</div></button>
+            <button class="part"><a href="/manifolds-headers"><img src="manifolds.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/manifolds-headers"><div class="p-2">Manifolds & Headers</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="downpipes.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">Downpipes</div></button>
+            <button class="part"><a href="/downpipes"><img src="downpipes.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/downpipes"><div class="p-2">Downpipes</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="housings.jpg" class="rounded" width="150" height="150" /></button>
-            <button class="part"><div class="p-2">O2 Housings & Turbo Outlets</div></button>
+            <button class="part"><a href="/o2-housings"><img src="housings.jpg" class="rounded" width="150" height="150" /></a></button>
+            <button class="part"><a href="/o2-housings"><div class="p-2">O2 Housings & Turbo Outlets</div></a></button>
           </div>
           <div class="col-4">
             <button class="part"><img src="muffler.jpg" class="rounded" width="150" height="150" /></button>
