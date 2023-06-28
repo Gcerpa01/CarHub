@@ -50,20 +50,20 @@ export default function Shop() {
             <button class="part"><a href="/vland-headlights"><div class="p-2">2008-2017 Mitsubishi Evo X (AUDI STYLE) VLAND Projectors (CH-EVLH)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="ETS.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">ETS 03-06 MITSUBISHI EVO 8/9 STANDARD TANK INTERCOOLER (CH-IC03)</div></button>
+            <button class="part"><a href="/ets-intercooler"><img src="ETS.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/ets-intercooler"><div class="p-2">ETS 03-06 MITSUBISHI EVO 8/9 STANDARD TANK INTERCOOLER (CH-IC03)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="ETS-intake.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">ETS 08-16 MITSUBISHI EVO X STOCK LOCATION TITANIUM INTAKE (CH-ETS4)</div></button>
+            <button class="part"><a href="/ets-intake"><img src="ETS-intake.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/ets-intake"><div class="p-2">ETS 08-16 MITSUBISHI EVO X STOCK LOCATION TITANIUM INTAKE (CH-ETS4)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="ETS-tkit.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">ETS 08-16 MITSUBISHI EVO X T4 TWIN SCROLL TURBO KIT (CH-ETST)</div></button>
+            <button class="part"><a href="/ets-turbo-kit"><img src="ETS-tkit.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/ets-turbo-kit"><div class="p-2">ETS 08-16 MITSUBISHI EVO X T4 TWIN SCROLL TURBO KIT (CH-ETST)</div></a></button>
           </div>
           <div class="col-4">
-            <button class="part"><img src="ps4s.jpg" class ="rounded" width ="150" height ="150"/></button>
-            <button class="part"><div class="p-2">Michelin Pilot Sport 4 S 275/35/R18 (CH-MPS4)</div></button>
+            <button class="part"><a href="/fuel-injectors"><img src="fic6.jpg" class ="rounded" width ="150" height ="150"/></a></button>
+            <button class="part"><a href="/fuel-injectors"><div class="p-2">Fuel Injector Clinic 1650cc High-Z Injector Set | 2008-2015 Mitsubishi Evo X (CH-FIC6)</div></a></button>
           </div>
       </div>
       <br></br>

@@ -10,7 +10,7 @@ import Shop from './pages/shop/shop'
 import Contact from './pages/contact'
 import Login from './pages/account/login'
 import Exhaust from './pages/shop/shop-categories/exhaust'
-import ExhaustSystems from './pages/shop/exhaust-systems'
+import ExhaustSystems from './pages/shop/category-items/exhaust-systems'
 import Styling from './pages/shop/shop-categories/styling'
 import ForcedInduction from './pages/shop/shop-categories/forced-induction';
 import Suspension from './pages/shop/shop-categories/suspension';
@@ -23,6 +23,10 @@ import Precision from './pages/shop/item-pages/precision-turbo';
 import Te37 from './pages/shop/item-pages/te37';
 import BCCoils from './pages/shop/item-pages/bc-coils';
 import VLAND from './pages/shop/item-pages/vland-headlights';
+import ETSIntercooler from './pages/shop/item-pages/ets-intercooler';
+import ETSIntake from './pages/shop/item-pages/ets-intake';
+import ETSTurboKit from './pages/shop/item-pages/ets-turbo-kit';
+import FuelInjectors from './pages/shop/item-pages/fuel-injectors';
 
 function App() {
   return (
@@ -52,6 +56,10 @@ function App() {
           <Route path = "/te37" element = {<Te37 />} />
           <Route path = "/bc-coils" element = {<BCCoils />} />
           <Route path = "/vland-headlights" element = {<VLAND />} />
+          <Route path = "/ets-intercooler" element = {<ETSIntercooler />} />
+          <Route path = "/ets-intake" element = {<ETSIntake />} />
+          <Route path = "/ets-turbo-kit" element = {<ETSTurboKit />} />
+          <Route path = "/fuel-injectors" element = {<FuelInjectors />} />
         </Routes>
       </BrowserRouter>
     </div>
