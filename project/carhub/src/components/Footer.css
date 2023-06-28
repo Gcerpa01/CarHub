@@ -24,7 +24,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0;
 }e
@@ -47,4 +47,20 @@ html, body {
 .footer .right a {
   text-decoration: none;
   color: #fff;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  background-color: #777;
 }

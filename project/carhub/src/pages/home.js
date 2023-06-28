@@ -37,7 +37,8 @@ export default function Home() {
   return (
     <div className="App">
       <Header />
-    <section className="jumbotron text-center">
+      <div className="home-container">
+      <section className="jumbotron text-center">
       <div className="container">
         <h1 className="display-4">Welcome to our website!</h1>
         <p className="lead">Explore our amazing products and services.</p>
@@ -141,6 +142,7 @@ export default function Home() {
     </div>
   </div>
       <Footer />
+      </div>
     </div>
   );
 }
