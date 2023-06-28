@@ -9,8 +9,6 @@ export default function Messages() {
 
   const [groupsData, setGroupsData] = useState([])
 
-  // const [messagesData,setMessagesData] = useState([])
-
   const [filteredMessages, setFilteredMessages] = useState([])
 
   useEffect(() => {
@@ -18,7 +16,7 @@ export default function Messages() {
     fetch('http://127.0.0.1:8000/groups.json')
       .then(response => response.json())
       .then(data => {
-        const filteredGroups = data.groups.filter(group => group.joined === true);
+        const filteredGroups = data.groups.filter(group => group.joined === true); //only filter those the user has subscribed to
         setGroupsData(filteredGroups)
       })
       .catch(error => {
@@ -28,7 +26,7 @@ export default function Messages() {
 
 
   useEffect(() => {
-    const fetchMessages = () => {
+    const fetchMessages = () => { //read messages from server
       if (selectedOption) {
         fetch('http://127.0.0.1:8000/messages.json')
           .then(response => response.json())
@@ -48,8 +46,8 @@ export default function Messages() {
     // Fetch messages initially
     fetchMessages();
 
-    // Fetch messages every 5 seconds
-    const interval = setInterval(fetchMessages, 5000);
+    // Fetch messages every 3 seconds
+    const interval = setInterval(fetchMessages, 3000);
 
     // Cleanup interval on unmount
     return () => clearInterval(interval);
@@ -60,6 +58,36 @@ export default function Messages() {
     localStorage.setItem('selectedOption', option);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const messageInput = document.getElementById('message_typed');
+    const message = messageInput.value;
+
+    fetch('http://127.0.0.1:8000/messages.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name: "Current User", message: message, group: selectedOption, timestamp: Date.now() }),
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Group updated successfully.');
+        } else {
+          console.error('Failed to update group:', response.status);
+        }
+      })
+      .catch(error => {
+        console.error('Error updating group:', error);
+      });
+
+    
+    // Handle the submitted message, e.g., send it to the server
+    console.log('Submitted message:', message);
+
+    // Clear the input field
+    messageInput.value = '';
+  };
 
   const renderOptionContent = () => {
     return (
@@ -103,7 +131,7 @@ export default function Messages() {
 
           <div className="dms-container">
             {renderOptionContent()}
-            <form>
+            <form onSubmit={handleSubmit} autoComplete="off">
               <div>
                 <input type="text" id="message_typed" className="form-control" placeholder="Type your message:" />
               </div>
