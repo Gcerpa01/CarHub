@@ -19,47 +19,47 @@ export default function Messages() {
     switch (selectedOption) {
       case 'Ford':
         return (
-          <div class="message-logs-container">
-            <div class="list-group">
-              <li class="message-group-item" > <text class="User"> User 1: </text> Cras justo odio testing the amount of lines that will</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text> Dapibus ac facilisis in</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Morbi leo risus</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Porta ac consectetur ac</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text>Vestibulum at eros</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Vestibulum at eros</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text>Vestibulum at eros</li>
+          <div className="message-logs-container">
+            <div className="list-group">
+              <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div> Dapibus ac facilisis in</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Morbi leo risus</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Porta ac consectetur ac</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Vestibulum at eros</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
             </div>
           </div>
         );
       case 'Kia':
         return (
-          <div class="message-logs-container">
-            <div class="list-group">
-              <li class="message-group-item" > <text class="User"> User 1: </text> Cras justo odio testing the amount of lines that will</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text> Dapibus ac facilisis in</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Morbi leo risus</li>
+          <div className="message-logs-container">
+            <div className="list-group">
+              <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div> Dapibus ac facilisis in</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Morbi leo risus</li>
             </div>
           </div>
         );
       case 'Tesla':
         return (
-          <div class="message-logs-container">
-            <div class="list-group">
-              <li class="message-group-item" > <text class="User"> User 1: </text> Cras justo odio testing the amount of lines that will</li>
+          <div className="message-logs-container">
+            <div className="list-group">
+              <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
             </div>
           </div>
         );
       default:
         return (
-          <div class="message-logs-container">
-            <div class="list-group">
-              <li class="message-group-item" > <text class="User"> User 1: </text> Cras justo odio testing the amount of lines that will</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text> Dapibus ac facilisis in</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Morbi leo risus</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Porta ac consectetur ac</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text>Vestibulum at eros</li>
-              <li class="message-group-item">  <text class="Main-User"> User 2: </text> Vestibulum at eros</li>
-              <li class="message-group-item"> <text class="User"> User 1: </text>Vestibulum at eros</li>
+          <div className="message-logs-container">
+            <div className="list-group">
+              <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div> Dapibus ac facilisis in</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Morbi leo risus</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Porta ac consectetur ac</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
+              <li className="message-group-item">  <div className="Main-User"> User 2: </div> Vestibulum at eros</li>
+              <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
             </div>
           </div>
         );
@@ -68,12 +68,12 @@ export default function Messages() {
 
   return (
     <div className="App">
-      <div class="messages-page">
+      <div className="messages-page">
         <Header />
-        <div class="messages-container">
+        <div className="messages-container">
 
           {/* Making Groups on left side */}
-          <div class="groups-container">
+          <div className="groups-container">
 
             {groupsData.groups.map((group, index) => (
               <button
@@ -88,13 +88,13 @@ export default function Messages() {
 
           </div>
 
-          <div class="headerDivider"></div>
+          <div className="headerDivider"></div>
 
-          <div class="dms-container">
+          <div className="dms-container">
             {renderOptionContent()}
             <form>
               <div>
-                <input type="text" id="message_typed" class="form-control" placeholder="Type your message:" />
+                <input type="text" id="message_typed" className="form-control" placeholder="Type your message:" />
               </div>
             </form>
           </div>
