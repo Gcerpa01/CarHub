@@ -50,10 +50,10 @@ export default function Groups() {
         <>
             <Header />
 
-            <div class="search-box">
+            <div className="search-box">
                 <form>
                     <div>
-                        <input type="text" id="group_search" class="form-control" placeholder="Search for group" onChange={userSearch} autocomplete="off" />
+                        <input type="text" id="group_search" className="form-control" placeholder="Search for group" onChange={userSearch} autoComplete="off" />
                     </div>
                 </form>
 
@@ -80,16 +80,16 @@ export default function Groups() {
 
             </div>
 
-            <div id="carousel-Groups" class="carousel" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <div id="carousel-Groups" className="carousel" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carousel-Groups" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
+                <div className="carousel-inner">
                     {groupData.groups.slice(0, 3).map((group, index) => (
-                        <div class={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                            <img src={group.image} class="group-image" alt="Group" />
+                        <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                            <img src={group.image} className="group-image" alt="Group" />
                             <div className="custom-caption">
                                 <h2 className="carousel-group-name">{group.name}</h2>
                                 <h3 className="carousel-group-members">members: {group.members}</h3>
@@ -97,10 +97,10 @@ export default function Groups() {
                                 <p>
 
 
-                                    {group.joined ? <a class="btn btn-sm btn-primary align-items-center disabled" href="#">
+                                    {group.joined ? <a className="btn btn-sm btn-primary align-items-center disabled" href="#">
                                         Joined Group
                                     </a>
-                                        : (<a class="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
+                                        : (<a className="btn btn-sm btn-primary align-items-center" href="#" onClick={() => joinGroup(group)}>
                                             Join Group </a>)
                                     }
 
@@ -112,14 +112,14 @@ export default function Groups() {
 
                 </div>
 
-                <button class="carousel-control-prev " type="button" data-bs-target="#carousel-Groups" data-bs-slide="prev" >
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                <button className="carousel-control-prev " type="button" data-bs-target="#carousel-Groups" data-bs-slide="prev" >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
                 </button>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-Groups" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                <button className="carousel-control-next" type="button" data-bs-target="#carousel-Groups" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
                 </button>
             </div>
 

@@ -1,6 +1,10 @@
 .App {
   text-align: center;
   background-color: #232323;
+  /*  Giving the home page more space between sections  */
+  display: flex;
+  flex-direction: column;
+  grid-gap: 30px;
 }
 
 .App-logo {
