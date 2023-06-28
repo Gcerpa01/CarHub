@@ -23,3 +23,14 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Message(models.Model):
+    name = models.CharField(max_length=200)
+    message = models.CharField(max_length=280) ##use twitter max
+    group = models.CharField(max_length = 200)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
