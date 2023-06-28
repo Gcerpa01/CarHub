@@ -27,99 +27,54 @@ export default function Messages() {
   }, []);
 
 
-  useEffect(() => { //run whenever selected option has new value
-    if (selectedOption) {
-      fetch('http://127.0.0.1:8000/messages.json')
-        .then(response => response.json())
-        .then(data => {
-          const groupMessages = data.messages.filter(message => selectedOption === message.group);
-          const sortedGroupMessages = groupMessages.sort((a, b) => {
-            return new Date(a.timestamp) - new Date(b.timestamp);
+  useEffect(() => {
+    const fetchMessages = () => {
+      if (selectedOption) {
+        fetch('http://127.0.0.1:8000/messages.json')
+          .then(response => response.json())
+          .then(data => {
+            const groupMessages = data.messages.filter(message => selectedOption === message.group);
+            const sortedGroupMessages = groupMessages.sort((a, b) => {
+              return new Date(a.timestamp) - new Date(b.timestamp);
+            });
+            setFilteredMessages(sortedGroupMessages);
+          })
+          .catch(error => {
+            console.error('Error fetching group data:', error);
           });
-          console.log(sortedGroupMessages)
-          setFilteredMessages(sortedGroupMessages);
-        })
-        .catch(error => {
-          console.error('Error fetching group data:', error);
-        });
-    }
-  }, [selectedOption]);
+      }
+    };
 
+    // Fetch messages initially
+    fetchMessages();
+
+    // Fetch messages every 5 seconds
+    const interval = setInterval(fetchMessages, 5000);
+
+    // Cleanup interval on unmount
+    return () => clearInterval(interval);
+  }, [selectedOption]);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     localStorage.setItem('selectedOption', option);
   };
 
+
   const renderOptionContent = () => {
-    // fetch('http://127.0.0.1:8000/messages.json')
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     const group_messages = data.messages.filter(message => selectedOption == message.group);
-
-    //     const sorted_group_messages = group_messages.sort((a,b) => {
-    //       return new Date(a.timestamp) - new Date(b.timestamp);
-    //     });
-
-    //     console.log(sorted_group_messages);
-    //     setFilteredMessages(sorted_group_messages);
-    //     // setGroupData(data.groups);
-    //     // setFilteredGroups(data.groups);
-    //   })
-    //   .catch(error => {
-    //     console.error('Error fetching group data:', error);
-    //   });
-
-
-      
-    // switch (selectedOption) {
-    //   case 'Ford':
-    //     return (
-    //       <div className="message-logs-container">
-    //         <div className="list-group">
-    //           <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div> Dapibus ac facilisis in</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Morbi leo risus</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Porta ac consectetur ac</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Vestibulum at eros</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
-    //         </div>
-    //       </div>
-    //     );
-    //   case 'Kia':
-    //     return (
-    //       <div className="message-logs-container">
-    //         <div className="list-group">
-    //           <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div> Dapibus ac facilisis in</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Morbi leo risus</li>
-    //         </div>
-    //       </div>
-    //     );
-    //   case 'Tesla':
-    //     return (
-    //       <div className="message-logs-container">
-    //         <div className="list-group">
-    //           <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
-    //         </div>
-    //       </div>
-    //     );
-    //   default:
-    //     return (
-    //       <div className="message-logs-container">
-    //         <div className="list-group">
-    //           <li className="message-group-item" > <div className="User"> User 1: </div> Cras justo odio testing the amount of lines that will</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div> Dapibus ac facilisis in</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Morbi leo risus</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Porta ac consectetur ac</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
-    //           <li className="message-group-item">  <div className="Main-User"> User 2: </div> Vestibulum at eros</li>
-    //           <li className="message-group-item"> <div className="User"> User 1: </div>Vestibulum at eros</li>
-    //         </div>
-    //       </div>
-    //     );
-    // }
+    return (
+      <div className="message-logs-container">
+        <div className="list-group">
+          {filteredMessages.map((message, index) => (
+            <li className="message-group-item" key={index}>
+              <div className={message.name == 'Current User' ? 'Main-User' : 'User'}>
+                {message.name}:
+              </div> {message.message}
+            </li>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
