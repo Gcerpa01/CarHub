@@ -7,7 +7,7 @@ import Account from './pages/account/account';
 import Messages from './pages/messages/messages';
 import ItemShop from './pages/shop/item-pages/itemshop';
 import Shop from './pages/shop/shop';
-import Contact from './pages/contact';
+import Contact from './pages/contact/contact';
 import Login from './pages/account/login';
 import Exhaust from './pages/shop/shop-categories/exhaust';
 import ExhaustSystems from './pages/shop/category-items/exhaust-systems';
