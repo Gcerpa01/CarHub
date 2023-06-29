@@ -1,7 +1,7 @@
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import './Messages.css'; // Assuming the CSS file is named "Header.css"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Messages() {
 
@@ -11,17 +11,31 @@ export default function Messages() {
 
   const [filteredMessages, setFilteredMessages] = useState([])
 
+  const messagesContainerRef = useRef(null);
+
   useEffect(() => {
-    // Fetch data from the API endpoint
-    fetch('http://127.0.0.1:8000/groups.json')
-      .then(response => response.json())
-      .then(data => {
-        const filteredGroups = data.groups.filter(group => group.joined === true); //only filter those the user has subscribed to
-        setGroupsData(filteredGroups)
-      })
-      .catch(error => {
-        console.error('Error fetching group data:', error);
-      });
+
+    const fetchGroups = () => {
+      // Fetch data from the API endpoint
+      fetch('http://127.0.0.1:8000/groups.json')
+        .then(response => response.json())
+        .then(data => {
+          const filteredGroups = data.groups.filter(group => group.joined === true); //only filter those the user has subscribed to
+          setGroupsData(filteredGroups)
+        })
+        .catch(error => {
+          console.error('Error fetching group data:', error);
+        });
+    }
+
+
+
+    fetchGroups();
+
+    // Fetch groups every 3 seconds
+    const interval = setInterval(fetchGroups, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
 
@@ -81,7 +95,7 @@ export default function Messages() {
         console.error('Error updating group:', error);
       });
 
-    
+
     // Handle the submitted message, e.g., send it to the server
     console.log('Submitted message:', message);
 
@@ -89,9 +103,17 @@ export default function Messages() {
     messageInput.value = '';
   };
 
+
+  // Scroll to bottom with every new update of messages
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+  }, [filteredMessages]);
+
   const renderOptionContent = () => {
     return (
-      <div className="message-logs-container">
+      <div className="message-logs-container" ref={messagesContainerRef}>
         <div className="list-group">
           {filteredMessages.map((message, index) => (
             <li className="message-group-item" key={index}>
