@@ -1,235 +1,81 @@
 import React, { useState, useEffect } from 'react';
-import data from '../../db/users.json';
 import './account.css';
 
 const ProfileContainer = ({ selectedOption, handleOptionClick }) => {
-  const [orders, setOrders] = useState([]);
-  const userName = data.profile.name;
+  const [profileData, setProfileData] = useState({
+    name: '',
+    email: '',
+    bio: '',
+    password: '',
+    notifications_enabled: false,
+    preferred_language: '',
+    card_number: '',
+    expiration_date: '',
+    billing_address: '',
+  });
 
   useEffect(() => {
-    setOrders(data.orders);
+    fetch('http://127.0.0.1:8000/profiles/1/') // Assuming the first profile has the ID of 1
+      .then((response) => response.json())
+      .then((data) => {
+        setProfileData(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching profile data:', error);
+      });
   }, []);
 
-  const [expandedOrders, setExpandedOrders] = useState([]);
-  const [profileFormData, setProfileFormData] = useState({
-    name: data.profile.name,
-    email: data.profile.email,
-    bio: data.profile.bio,
-  });
-  const [settingsFormData, setSettingsFormData] = useState({
-    password: data.settings.password,
-    notifications: data.settings.notifications,
-    language: data.settings.language,
-  });
-  const [billingFormData, setBillingFormData] = useState({
-    cardNumber: data.billing.cardNumber,
-    expirationDate: data.billing.expirationDate,
-    billingAddress: data.billing.billingAddress,
-  });
-
-  const toggleOrder = (orderNumber) => {
-    if (expandedOrders.includes(orderNumber)) {
-      setExpandedOrders(expandedOrders.filter((order) => order !== orderNumber));
-    } else {
-      setExpandedOrders([...expandedOrders, orderNumber]);
-    }
-  };
+  const [passwordsMatchError, setPasswordsMatchError] = useState(false);  
 
   const handleProfileFormSubmit = (e) => {
     e.preventDefault();
-    const updatedData = { ...data, profile: profileFormData };
-    saveData(updatedData);
-  };
-
-  const handleSettingsFormSubmit = (e) => {
-    e.preventDefault();
-    const updatedData = { ...data, settings: settingsFormData };
-    saveData(updatedData);
+    saveProfileData(profileData);
   };
 
   const handleBillingFormSubmit = (e) => {
     e.preventDefault();
-    const updatedData = { ...data, billing: billingFormData };
-    saveData(updatedData);
+    // Handle saving billing information data
   };
 
-  const saveData = (updatedData) => {
-    // Send an HTTP request to the server to save the data
-    fetch('/api/saveUserData', {
-      method: 'POST',
+  const handleSettingsFormSubmit = (e) => {
+    e.preventDefault();
+  
+    if (profileData.password !== profileData.confirmPassword) {
+      setPasswordsMatchError(true);
+      return;
+    }
+  
+    // Passwords match, proceed with submitting the form
+    setPasswordsMatchError(false);
+  
+    // Make the PUT request
+    const updatedProfileData = {
+      ...profileData,
+      confirmPassword: undefined, // Remove the confirmPassword field from the data object
+    };
+    saveProfileData(updatedProfileData);
+  };
+  
+  
+  const saveProfileData = (data) => {
+    if (data.confirmPassword) {
+      delete data.confirmPassword;
+    }
+  
+    fetch('http://127.0.0.1:8000/profiles/1/', {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(updatedData),
+      body: JSON.stringify(data),
     })
       .then((response) => response.json())
-      .then((data) => {
-        // Handle success or display a success message
-        console.log('Data saved successfully!');
+      .then(() => {
+        console.log('Profile data saved successfully!');
       })
       .catch((error) => {
-        // Handle error or display an error message
-        console.error('Error saving data:', error);
+        console.error('Error saving profile data:', error);
       });
-  };
-
-  const renderOptionContent = () => {
-    switch (selectedOption) {
-      case 'profile':
-        return (
-          <div>
-            <h2>Welcome back, {userName}!</h2>
-            <div className="main-container">
-              <form onSubmit={handleProfileFormSubmit}>
-                <label htmlFor="name">Name:</label><br />
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  value={profileFormData.name}
-                  onChange={(e) => setProfileFormData({ ...profileFormData, name: e.target.value })}
-                /><br />
-                <label htmlFor="email">Email:</label><br />
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  value={profileFormData.email}
-                  onChange={(e) => setProfileFormData({ ...profileFormData, email: e.target.value })}
-                /><br />
-                <label htmlFor="bio">Bio:</label><br />
-                <textarea
-                  id="bio"
-                  name="bio"
-                  placeholder="Write a short bio about yourself"
-                  value={profileFormData.bio}
-                  onChange={(e) => setProfileFormData({ ...profileFormData, bio: e.target.value })}
-                ></textarea><br />
-                <button type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-        );
-      case 'settings':
-        return (
-          <div>
-            <h2>Account Settings</h2>
-            <div className="main-container">
-              <form onSubmit={handleSettingsFormSubmit}>
-                <label htmlFor="password">Password:</label><br />
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Enter your new password"
-                  value={settingsFormData.password}
-                  onChange={(e) => setSettingsFormData({ ...settingsFormData, password: e.target.value })}
-                /><br />
-                <label htmlFor="notifications">Notifications:</label><br />
-                <select
-                  id="notifications"
-                  name="notifications"
-                  value={settingsFormData.notifications}
-                  onChange={(e) => setSettingsFormData({ ...settingsFormData, notifications: e.target.value })}
-                >
-                  <option value="enabled">Enabled</option>
-                  <option value="disabled">Disabled</option>
-                </select><br />
-                <label htmlFor="language">Preferred Language:</label><br />
-                <select
-                  id="language"
-                  name="language"
-                  value={settingsFormData.language}
-                  onChange={(e) => setSettingsFormData({ ...settingsFormData, language: e.target.value })}
-                >
-                  <option value="english">English</option>
-                  <option value="spanish">Spanish</option>
-                  <option value="french">French</option>
-                </select><br />
-                <button type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-        );
-      case 'orders':
-        return (
-          <div>
-            <h2>Your Orders</h2>
-            <div className="main-container">
-              <div className="order-list">
-                {orders.length > 0 ? (
-                  orders.map((order) => (
-                    <div key={order.orderNumber} className="order-item">
-                      <h3 className="order-header" onClick={() => toggleOrder(order.orderNumber)}>
-                        Order Number: {order.orderNumber}
-                      </h3>
-                      {expandedOrders.includes(order.orderNumber) && (
-                        <div className="order-details">
-                          <p>Date: {order.date}</p>
-                          <p>Status: {order.status}</p>
-                          <p>Total: {order.total}</p>
-                          <ul>
-                            {order.items.map((item) => (
-                              <li key={item.name}>
-                                <p>{item.name}</p>
-                                <p>Quantity: {item.quantity}</p>
-                                <p>Price: {item.price}</p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  ))
-                ) : (
-                  <p>No orders found.</p>
-                )}
-              </div>
-            </div>
-          </div>
-        );
-      case 'billing':
-        return (
-          <div>
-            <h2>Billing Information</h2>
-            <div className="main-container">
-              <form onSubmit={handleBillingFormSubmit}>
-                <label htmlFor="cardNumber">Card Number:</label><br />
-                <input
-                  type="text"
-                  id="cardNumber"
-                  name="cardNumber"
-                  placeholder="Enter your card number"
-                  value={billingFormData.cardNumber}
-                  onChange={(e) => setBillingFormData({ ...billingFormData, cardNumber: e.target.value })}
-                /><br />
-                <label htmlFor="expirationDate">Expiration Date:</label><br />
-                <input
-                  type="text"
-                  id="expirationDate"
-                  name="expirationDate"
-                  placeholder="MM/YY"
-                  value={billingFormData.expirationDate}
-                  onChange={(e) => setBillingFormData({ ...billingFormData, expirationDate: e.target.value })}
-                /><br />
-                <label htmlFor="billingAddress">Billing Address:</label><br />
-                <textarea
-                  id="billingAddress"
-                  name="billingAddress"
-                  placeholder="Enter your billing address"
-                  value={billingFormData.billingAddress}
-                  onChange={(e) => setBillingFormData({ ...billingFormData, billingAddress: e.target.value })}
-                ></textarea><br />
-                <button type="submit">Save</button>
-              </form>
-            </div>
-          </div>
-        );
-      default:
-        return null;
-    }
   };
 
   return (
@@ -248,20 +94,153 @@ const ProfileContainer = ({ selectedOption, handleOptionClick }) => {
           Account Settings
         </button>
         <button
-          className={selectedOption === 'orders' ? 'active' : ''}
-          onClick={() => handleOptionClick('orders')}
-        >
-          Order History
-        </button>
-        <button
           className={selectedOption === 'billing' ? 'active' : ''}
           onClick={() => handleOptionClick('billing')}
         >
           Billing Information
         </button>
+        <button type="submit" onClick={handleProfileFormSubmit}>Save Profile</button>
+        {selectedOption === 'profile' }
       </div>
       <div className="right-container">
-        {renderOptionContent()}
+        {selectedOption === 'profile' && (
+          <div>
+            <h2>Welcome back, {profileData.name}!</h2>
+            <div className="main-container">
+              <form>
+                <label htmlFor="name">Name:</label><br />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  value={profileData.name}
+                  onChange={(e) => setProfileData({ ...profileData, name: e.target.value })}
+                /><br />
+                <label htmlFor="email">Email:</label><br />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  value={profileData.email}
+                  onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
+                /><br />
+                <label htmlFor="bio">Bio:</label><br />
+                <textarea
+                  id="bio"
+                  name="bio"
+                  placeholder="Write a short bio about yourself"
+                  value={profileData.bio}
+                  onChange={(e) => setProfileData({ ...profileData, bio: e.target.value })}
+                ></textarea><br />
+                {/* Other profile form inputs */}
+              </form>
+            </div>
+          </div>
+        )}
+
+{selectedOption === 'settings' && (
+  <div>
+    <h2>Account Settings</h2>
+    <div className="main-container">
+      <form onSubmit={handleSettingsFormSubmit}>
+        <label htmlFor="password">Password:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your new password"
+          value={profileData.password}
+          onChange={(e) => setProfileData({ ...profileData, password: e.target.value })}
+        /><br />
+        <label htmlFor="confirmPassword">Confirm Password:</label><br />
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Confirm your new password"
+          value={profileData.confirmPassword}
+          onChange={(e) => setProfileData({ ...profileData, confirmPassword: e.target.value })}
+        /><br />
+        {passwordsMatchError && <span>Passwords do not match.</span>}
+        <label htmlFor="notifications">Notifications:</label><br />
+        <select
+          id="notifications"
+          name="notifications"
+          value={profileData.notifications_enabled ? 'enabled' : 'disabled'}
+          onChange={(e) =>
+            setProfileData({
+              ...profileData,
+              notifications_enabled: e.target.value === 'enabled',
+            })
+          }
+        >
+          <option value="enabled">Enabled</option>
+          <option value="disabled">Disabled</option>
+        </select><br />
+        <label htmlFor="language">Preferred Language:</label><br />
+        <select
+          id="language"
+          name="language"
+          value={profileData.preferred_language}
+          onChange={(e) => setProfileData({ ...profileData, preferred_language: e.target.value })}
+        >
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+        </select><br />
+      </form>
+    </div>
+  </div>
+)}
+
+
+{selectedOption === 'billing' && (
+  <div>
+    <h2>Billing Information</h2>
+    <div className="main-container">
+      <form onSubmit={handleBillingFormSubmit}>
+        <label htmlFor="cardNumber">Card Number:</label><br />
+        <input
+          type="text"
+          id="cardNumber"
+          name="cardNumber"
+          placeholder="Enter your card number"
+          value={profileData.card_number}
+          maxLength={16} // Limiting the length to 16 characters
+          onChange={(e) =>
+            setProfileData({ ...profileData, card_number: e.target.value })
+          }
+        /><br />
+        <label htmlFor="expirationDate">Expiration Date:</label><br />
+        <input
+          type="text"
+          id="expirationDate"
+          name="expirationDate"
+          placeholder="MM/YY"
+          value={profileData.expiration_date}
+          maxLength={5} // Limiting the length to 5 characters
+          onChange={(e) =>
+            setProfileData({ ...profileData, expiration_date: e.target.value })
+          }
+        /><br />
+        <label htmlFor="billingAddress">Billing Address:</label><br />
+        <textarea
+          id="billingAddress"
+          name="billingAddress"
+          placeholder="Enter your billing address"
+          value={profileData.billing_address}
+          maxLength={200} // Limiting the length to 200 characters
+          onChange={(e) =>
+            setProfileData({ ...profileData, billing_address: e.target.value })
+          }
+        ></textarea><br />
+      </form>
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   );

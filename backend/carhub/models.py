@@ -18,7 +18,7 @@ class Profile(models.Model):
     notifications_enabled = models.BooleanField()
     preferred_language = models.CharField(max_length=100)
     card_number = models.CharField(max_length=16)
-    expiration_date = models.DateField()
+    expiration_date = models.CharField(max_length=5)
     billing_address = models.TextField()
 
     def __str__(self):
