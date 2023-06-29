@@ -6,11 +6,11 @@ export default function ETSTurboKit() {
   return (
     <div className="App">
       <Header />
-      <div class="item-container">
-      <div class="left-container">
+      <div class="itemblock">
+      <div class="leftblock">
         <div class="item-img"><img src="ets-turbo-kit.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="right-container">
+      <div class="rightblock">
         <div>
           <h2 class="item-name">ETS 08-16 MITSUBISHI EVO X T4 TWIN SCROLL TURBO KIT<br></br></h2>
           <p class="item-brand">Extreme Turbo Systems (ETS)</p>

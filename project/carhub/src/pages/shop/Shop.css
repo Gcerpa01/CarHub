@@ -112,12 +112,12 @@
     font-size: 20pt;
 }
 
-.item-container{
+.itemblock{
     display: flex;
     flex-direction: column;
 }
 
-.left-container {
+.leftblock {
     flex: 1;
     width: 50%;
     /* float: left; */
@@ -126,7 +126,7 @@
     border: none;
     /* height: 300px; */
 }  
-.right-container {
+.rightblock {
     margin-left: 700px;
     flex: 8;
     width: 50%;

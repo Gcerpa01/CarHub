@@ -6,11 +6,11 @@ export default function TomeiOutlet() {
   return (
     <div className="App">
       <Header />
-      <div class="item-container">
-      <div class="left-container">
+      <div class="itemblock">
+      <div class="leftblock">
         <div class="item-img"><img src="tomei-outlet.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="right-container">
+      <div class="rightblock">
         <div>
           <h2 class="item-name">Tomei Expreme V2 Turbine Outlet | 2001-2006 Mitsubishi Evo 7-9<br></br></h2>
           <p class="item-brand">Tomei</p>

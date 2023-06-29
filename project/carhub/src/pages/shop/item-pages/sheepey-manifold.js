@@ -6,11 +6,11 @@ export default function SheepeyManifold() {
   return (
     <div className="App">
       <Header />
-      <div class="item-container">
-      <div class="left-container">
+      <div class="itemblock">
+      <div class="leftblock">
         <div class="item-img"><img src="sheepey-manifold.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="right-container">
+      <div class="rightblock">
         <div>
           <h2 class="item-name">SHEEPEYRACE MITSUBISHI EVO X FACTORY REPLACEMENT TURBO MANIFOLD<br></br></h2>
           <p class="item-brand">SHEEPEY Inc. (SR)</p>
