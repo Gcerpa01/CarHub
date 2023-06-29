@@ -6,16 +6,16 @@ import { CDropdownItemPlain } from '@coreui/react';
 import { CDropdownToggle } from '@coreui/react';
 import { PropTypes } from 'react';
 
-export default function Dropdown({dropdownItems, dropdownText, changeDropdownText}) {
+export default function Dropdown({dropdownItems, dropdownTitle, setDropdownTitle}) {
 
     return (
     <CDropdown>
-        <CDropdownToggle color="warning">{dropdownText}</CDropdownToggle>
+        <CDropdownToggle color="warning">Who would you like to contact?</CDropdownToggle>
         <CDropdownMenu>
             {dropdownItems.map((dropdownItem)=>
             (<CDropdownItem 
             key={dropdownItem.id} 
-            onClick={()=>changeDropdownText(dropdownItem.name)}>
+            onClick={()=>setDropdownTitle(dropdownItem.id)}>
                 {dropdownItem.name}
             </CDropdownItem>))}
         </CDropdownMenu>

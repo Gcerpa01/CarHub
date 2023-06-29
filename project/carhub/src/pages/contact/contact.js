@@ -7,7 +7,7 @@ import Dropdown from './components/Dropdown';
 
 export default function Contact() {
 
-  const [dropdownItems, setDropdownMenuItem] = useState([
+  const [dropdownItems, setDropdownItems] = useState([
     {
       id: 1,
       name: "Anthony",
@@ -35,10 +35,10 @@ export default function Contact() {
     },
   ])
 
-  var dropdownText = "Who would you like to contact?"
+  const [dropdownTitle, setTitle] = useState([''])
 
-  function changeDropdownText(newText){
-      dropdownText = newText
+  const setDropdownTitle = (id) => {
+    setTitle(dropdownTitle.filter((dropdownItems) => dropdownItems.id == id))
   }
 
   return (
@@ -58,14 +58,14 @@ export default function Contact() {
             <div className="form-group">
               <label htmlFor="userEmail">Please enter your email address:</label>
               <input type="email" className="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email"></input>
-              <small id="emailHelp" className="form-text text-muted">We will never share your email with the NSA.</small>
+              {/* <small id="emailHelp" className="form-text text-muted">We will never share your email with the NSA.</small> */}
             </div>
             <br/>
             <div className='flexbox'>
               <Dropdown 
               dropdownItems={dropdownItems}
-              dropdownText={dropdownText} 
-              changeDropdownText={changeDropdownText}/>
+              dropdownTitle={dropdownTitle.email}
+              setDropdownTitle={setDropdownTitle}/>
             </div>
             <br/>
             <div className="form-group">
