@@ -6,10 +6,11 @@ export default function VLAND() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="vland.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">2008-2017 Mitsubishi Evo X (AUDI STYLE) VLAND Projectors<br></br></h2>
           <p class="item-brand">VLAND</p>
@@ -57,6 +58,7 @@ export default function VLAND() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

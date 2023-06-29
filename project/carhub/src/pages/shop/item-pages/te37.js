@@ -6,10 +6,11 @@ export default function Te37() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="te371.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">Volk TE37 Saga Diamond Dark Gunmetal Wheel SET 18x9.5/5x114.3/+38 Offset<br></br></h2>
           <p class="item-brand">Volk Racing</p>
@@ -61,6 +62,7 @@ export default function Te37() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

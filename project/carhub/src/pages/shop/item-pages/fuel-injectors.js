@@ -6,10 +6,11 @@ export default function FuelInjectors() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="fic6.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">Fuel Injector Clinic 1650cc High-Z Injector Set | 2008-2015 Mitsubishi Evo X<br></br></h2>
           <p class="item-brand">Fuel Injector Clinic (FIC)</p>
@@ -57,6 +58,7 @@ export default function FuelInjectors() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

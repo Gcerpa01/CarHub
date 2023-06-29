@@ -6,10 +6,11 @@ export default function ItemShop() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="BMW-Exhaust.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">Bomiz Full Titanium Valvetronic Exhaust for BMW E9x M3<br></br></h2>
           <p class="item-brand">Bomiz</p>
@@ -65,6 +66,7 @@ export default function ItemShop() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

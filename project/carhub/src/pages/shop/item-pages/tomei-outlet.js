@@ -6,10 +6,11 @@ export default function TomeiOutlet() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="tomei-outlet.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">Tomei Expreme V2 Turbine Outlet | 2001-2006 Mitsubishi Evo 7-9<br></br></h2>
           <p class="item-brand">Tomei</p>
@@ -65,6 +66,7 @@ export default function TomeiOutlet() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

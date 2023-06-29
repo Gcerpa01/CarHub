@@ -6,10 +6,11 @@ export default function Precision() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="pte.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">Precision Turbo Street & Race PT6266 CEA JB Turbocharger - 735WHP<br></br></h2>
           <p class="item-brand">Precision Turbo (PTE)</p>
@@ -56,6 +57,7 @@ export default function Precision() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

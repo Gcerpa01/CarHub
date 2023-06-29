@@ -6,10 +6,11 @@ export default function BCCoils() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="bcc.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">BR Series Evo X Coilovers By BC Racing | 2008-2015 Mitsubishi Evo X<br></br></h2>
           <p class="item-brand">BC Racing</p>
@@ -59,6 +60,7 @@ export default function BCCoils() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {

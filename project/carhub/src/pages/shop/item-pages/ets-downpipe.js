@@ -6,10 +6,11 @@ export default function ETSDownpipe() {
   return (
     <div className="App">
       <Header />
-      <div class="float-child">
+      <div class="item-container">
+      <div class="left-container">
         <div class="item-img"><img src="ets-downpipe.jpg" class ="rounded" width ="500" height ="500"/></div>
       </div>
-      <div class="float-child">
+      <div class="right-container">
         <div>
           <h2 class="item-name">ETS Recirculated Downpipe | 2008-2015 Mitsubishi Evo X<br></br></h2>
           <p class="item-brand">Extreme Turbo Systems (ETS)</p>
@@ -58,6 +59,7 @@ export default function ETSDownpipe() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <script>
         {/* function increment(click) {
