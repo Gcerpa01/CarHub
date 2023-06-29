@@ -99,7 +99,14 @@ const ProfileContainer = ({ selectedOption, handleOptionClick }) => {
         >
           Billing Information
         </button>
-        <button type="submit" onClick={handleProfileFormSubmit}>Save Profile</button>
+        <button 
+          type="submit" 
+          onClick={handleProfileFormSubmit}
+          className="bordered-button"
+        >
+          Save Profile
+        </button>
+
         {selectedOption === 'profile' }
       </div>
       <div className="right-container">
