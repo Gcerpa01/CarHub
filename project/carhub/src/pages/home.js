@@ -62,7 +62,7 @@ export default function Home() {
               <div className="card-body">
                 <h3 className="card-title">Placeholder Item 1</h3>
                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lectus sed nisi aliquam, ac rhoncus leo aliquam.</p>
-                <button className="btn btn-primary">Learn More</button>
+                <button className="home-button" type="submit">Learn More</button>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
               <div className="card-body">
                 <h3 className="card-title">Placeholder Item 2</h3>
                 <p className="card-text">Sed gravida, lorem a vestibulum aliquam, sem felis malesuada lorem, sed molestie metus purus sed libero.</p>
-                <button className="btn btn-primary">Learn More</button>
+                <button className="home-button" type="submit">Learn More</button>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function Home() {
               <div className="card-body">
                 <h3 className="card-title">Placeholder Item 3</h3>
                 <p className="card-text">Donec nec sem sed erat cursus lacinia. Fusce scelerisque urna non sem interdum, nec maximus turpis rutrum.</p>
-                <button className="btn btn-primary">Learn More</button>
+                <button className="home-button" type="submit">Learn More</button>
               </div>
             </div>
           </div>
