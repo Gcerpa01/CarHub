@@ -79,7 +79,7 @@ export default function Groups() {
     return (
         <>
             <Header />
-
+            <h2 className="contenth2-heading"> Groups </h2>
             <div className="search-box">
                 <form>
                     <div>

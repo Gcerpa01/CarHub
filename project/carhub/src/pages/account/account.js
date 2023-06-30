@@ -15,6 +15,7 @@ const Account = () => {
   return (
     <div className="App">
       <Header />
+      <h2 className="contenth2-heading"> My Account </h2>
       <ProfileContainer
         selectedOption={selectedOption}
         handleOptionClick={handleOptionClick}

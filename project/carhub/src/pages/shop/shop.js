@@ -8,7 +8,7 @@ export default function Shop() {
     <div className="App">
       <Header />
       <div>
-      <h2 class="head">Part Selection</h2>
+      <h2 class="contenth2-heading">Part Selection</h2>
       </div>
       <div class="container part-list">
         <div class="row row-cols-9">

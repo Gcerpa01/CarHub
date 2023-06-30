@@ -1,6 +1,7 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { useState } from 'react';
+import './Home.css'
 
 export default function Home() {
 
@@ -37,76 +38,61 @@ export default function Home() {
   return (
     <div className="App">
       <Header />
+        <section className="hero-section">
+        <div className="home-container">
+          <h1 className="home-h1">Welcome to CarHub!</h1>
+          <div className="newsletter-signup">
+            <h2 className="home-h2">Subscribe to Our Newsletter</h2>
+            <form className="home-form">
+              <input className="home-input" type="text" placeholder="Enter your email" />
+              <button className="home-button" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
       <div className="home-container">
-      <section className="jumbotron text-center">
-      <div className="container">
-        <h1 className="display-4">Welcome to our website!</h1>
-        <p className="lead">Explore our amazing products and services.</p>
-        <button className="btn btn-primary btn-lg">Get Started</button>
-      </div>
-    </section>
     
-    <section className="container">
-      <h2 className="text-center">Featured Products</h2>
-      <div className="row">
-        {/* We were rendering the same column over and over again while changing the inner content */}
-        {/* <div className="col-lg-4">
-          <div className="card">
-            <img className="card-img-top" src="ford1.png" alt="2023 Ford Mustang"></img>
-            <div className="card-body">
-              <h3 className="card-title">2023 Ford Mustang</h3>
-              <p className="card-text">The 2023 Ford Mustang is an iconic American muscle car that combines power, performance, and style. With its aggressive design and muscular stance, the Mustang embodies a sense of speed and dominance on the road</p>
-              <button className="btn btn-primary">Learn More</button>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4">
-          <div className="card">
-            <img className="card-img-top" src="Crown.png" alt="2023 Toyota Crown"></img>
-            <div className="card-body">
-              <h3 className="card-title">2023 Toyota Crown</h3>
-              <p className="card-text">The 2023 Toyota Crown is a luxury sedan that blends sophistication, comfort, and advanced technology. As one of Toyota's flagship models, the Crown offers a refined and elegant design.</p>
-              <button className="btn btn-primary">Learn More</button>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4">
-          <div className="card">
-            <img className="card-img-top" src="infit.webp" alt="2023 Infiniti Q50"></img>
-            <div className="card-body">
-              <h3 className="card-title">2023 Infiniti Q50</h3>
-              <p className="card-text">The 2023 Infiniti Q50 is a luxury sports sedan that combines style, performance, and advanced technology. With its sleek and aggressive design, it exudes a sense of elegance and athleticism on the road.</p>
-              <button className="btn btn-primary">Learn More</button>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Instead, the Reactive way, is to store those products in data, and then loop over it */}
-        {/* First we check if we have products */}
-        {/* We have 3 Products currently, so this loop will run 3 times */}
-        {products.length > 0 && products.map((product, productIndex) => {
-            return ( // Will render the a column for each product
-              <div id={product.id} className="col-lg-4" key={productIndex}>
-                <div className="card">
-                  <img className="card-img-top" src={product.image} alt={product.title}></img>
-                  <div className="card-body">
-                    <h3 className="card-title">{product.title}</h3>
-                    <p className="card-text">{product.description}</p>
-                    {/* Ternerary Operator // One Line If Else Statement */}
-                    {/* Adding a function which will catch when the user clicks this button */}
-                    <button onClick={(e) => goToShop(e)} className="btn btn-primary">Learn More</button>
-                  </div>
-                </div>
+      <section className="home-container">
+        <h2 className="offer-heading">What We Offer</h2>
+        <div className="offer-container"> 
+        <div className="row">
+          <div className="col-lg-4">
+            <div className="card">
+              <img className="card-img-top" src="https://craftypixels.com/placeholder-image/300x300/ababab/000000&text=[PH]+CarHub" alt="Placeholder 1" />
+              <div className="card-body">
+                <h3 className="card-title">Placeholder Item 1</h3>
+                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur lectus sed nisi aliquam, ac rhoncus leo aliquam.</p>
+                <button className="btn btn-primary">Learn More</button>
               </div>
-            )
-          })
-        }  
-      </div>  
-    </section>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="card">
+              <img className="card-img-top" src="https://craftypixels.com/placeholder-image/300x300/ababab/000000&text=[PH]+CarHub" alt="Placeholder 2" />
+              <div className="card-body">
+                <h3 className="card-title">Placeholder Item 2</h3>
+                <p className="card-text">Sed gravida, lorem a vestibulum aliquam, sem felis malesuada lorem, sed molestie metus purus sed libero.</p>
+                <button className="btn btn-primary">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4">
+            <div className="card">
+              <img className="card-img-top" src="https://craftypixels.com/placeholder-image/300x300/ababab/000000&text=[PH]+CarHub" alt="Placeholder 3" />
+              <div className="card-body">
+                <h3 className="card-title">Placeholder Item 3</h3>
+                <p className="card-text">Donec nec sem sed erat cursus lacinia. Fusce scelerisque urna non sem interdum, nec maximus turpis rutrum.</p>
+                <button className="btn btn-primary">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</section>
+
 
   <section className="sponsors">
-    <h2>Our Sponsors</h2>
-    <div className="container">
+    <h2 className="home-h2">Our Sponsors</h2>
       <div className="row">
         <div className="col-sm-4">
           <img src="./vland-logo.png" alt="Vland" style={{width: "40%", height: "auto"}}></img>
@@ -118,29 +104,34 @@ export default function Home() {
           <img src="./rays-te37.png" alt="Rays" style={{width: "60%", height: "auto"}}></img>
         </div>
       </div>
-    </div>
 
 </section>
 <br></br>
 <br></br>
-  <div className="customer-reviews">
-    <h2>Customer Reviews</h2>
-    <div className="review">
-      <div className="reviewer-info">
-        <img src="John.jpg" alt="Customer 1" style={{width: 200, height: "auto"}}></img>
-        <h3>John Doe</h3>
+<div className="customer-reviews">
+  <h2>Customer Reviews</h2>
+  <div className="row">
+    <div className="col-sm-6">
+      <div className="review">
+        <div className="reviewer-info">
+          <img src="John.jpg" alt="Customer 1" style={{ width: 50, height: "auto" }}></img>
+          <h3>John Doe</h3>
+        </div>
+        <p className="review-text">Pellentesque et ligula dapibus, consectetur libero id, suscipit mauris. Morbi in leo ac ante volutpat vulputate. Nam viverra est nec metus ultrices eleifend. Vestibulum blandit turpis vel lorem eleifend malesuada.</p>
       </div>
-      <p className="review-text">Leo was here.... random comments from customers </p>
     </div>
-    <br></br>
-    <div className="review">
-      <div className="reviewer-info">
-        <img src="Jane.jpg" alt="Customer 2" style={{width: 200, height: "auto"}}></img>
-        <h3>Jane Smith</h3>
+    <div className="col-sm-6">
+      <div className="review">
+        <div className="reviewer-info">
+          <img src="Jane.jpg" alt="Customer 2" style={{ width: 50, height: "auto" }}></img>
+          <h3>Jane Smith</h3>
+        </div>
+        <p className="review-text">Pellentesque et ligula dapibus, consectetur libero id, suscipit mauris. Morbi in leo ac ante volutpat vulputate. Nam viverra est nec metus ultrices eleifend. Vestibulum blandit turpis vel lorem eleifend malesuada.</p>
       </div>
-      <p className="review-text">Pellentesque et ligula dapibus, consectetur libero id, suscipit mauris. Morbi in leo ac ante volutpat vulputate. Nam viverra est nec metus ultrices eleifend. Vestibulum blandit turpis vel lorem eleifend malesuada.</p>
     </div>
   </div>
+</div>
+
       <Footer />
       </div>
     </div>

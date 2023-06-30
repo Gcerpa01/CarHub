@@ -44,8 +44,7 @@ export default function Contact() {
   return (
     <div className="App">
       <Header />
-      <h2>Contact Page</h2>
-      <br/>
+      <h2 className="contenth2-heading">Contact Page</h2>
       <div className="row">
         <div className= "col"></div>
         <div className="col">

@@ -10,7 +10,7 @@
 .partButton{
     letter-spacing: 0.5px;
     color: white;
-    background-color: red;
+    background-color: #282c34;
     border: none;
     border-radius: 4px;
     width: 110px;
@@ -27,7 +27,7 @@
 .partButton:hover{
     letter-spacing: 0.5px;
     color: white;
-    background-color: rgb(251, 49, 49);
+    background-color: #373b42;
     border: none;
     border-radius: 4px;
     width: 110px;

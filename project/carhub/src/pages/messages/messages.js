@@ -131,6 +131,7 @@ export default function Messages() {
     <div className="App">
       <div className="messages-page">
         <Header />
+        <h2 className="contenth2-heading"> Messenger </h2>
         <div className="messages-container">
 
           {/* Making Groups on left side */}

@@ -1,9 +1,11 @@
-.search-box{
-    display:flex;
+.search-box {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    top:8%;
-}
+    width: 80%;
+    margin: 0 auto; /* Center horizontally */
+    top: 8%;
+  }
+  
 
 .search-container{
     display: flex;
