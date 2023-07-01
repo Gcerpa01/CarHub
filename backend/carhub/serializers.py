@@ -1,11 +1,10 @@
 from rest_framework import serializers
-from .models import Group
-from .models import Message
-from .models import Profile
+from .models import Group, Message, Profile, Product, CartItem
+
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
-        fields = ['id','name','members','description','joined','image']
+        fields = ['id', 'name', 'members', 'description', 'joined', 'image']
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,4 +14,17 @@ class ProfileSerializer(serializers.ModelSerializer):
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
-        fields = ['name','message','group','timestamp']
+        fields = ['name', 'message', 'group', 'timestamp']
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+class CartItemSerializer(serializers.ModelSerializer):
+    product = ProductSerializer()
+
+    class Meta:
+        model = CartItem
+        fields = '__all__'
+

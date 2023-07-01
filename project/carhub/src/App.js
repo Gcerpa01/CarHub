@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'; // Import the CSS file
+import Cart from './pages/cart/cart';
 import Groups from './pages/groups/groups';
 import Home from './pages/home';
 import Account from './pages/account/account';
@@ -41,6 +42,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/groups" element={<Groups />} />
           <Route path="/account" element={<Account />} />
           <Route path="/messages" element={<Messages />} />

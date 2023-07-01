@@ -25,8 +25,12 @@ urlpatterns = [
     path('groups/<int:id>/', views.group_detail),
     path('messages/',views.message_list),
     path('messages/<int:id>',views.message_detail),
-    path('profiles/', views.profile_list),                  # URL for listing profiles
-    path('profiles/<int:id>/', views.profile_detail),      # URL for individual profile detail
+    path('profiles/', views.profile_list),
+    path('profiles/<int:id>/', views.profile_detail),
+    path('products/', views.product_list),
+    path('products/<int:id>/', views.product_detail),
+    path('cart-items/', views.cart_item_list),
+    path('cart-items/<int:id>/', views.cart_item_detail),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

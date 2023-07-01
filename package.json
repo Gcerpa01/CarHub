@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@coreui/coreui": "^4.2.6",
+    "@coreui/react": "^4.8.0"
+  }
+}
