@@ -15,7 +15,12 @@ def install_npm_module(module_name,selected_dir,save=False):
         npm_commands = ['npm', 'install', module_name]
         if save:
             npm_commands.append("--save")
-        subprocess.check_call(npm_commands,shell=True, cwd=selected_dir)
+
+        if sys.platform.startswith('win'):  # For Windows
+            subprocess.check_call(npm_commands,shell=True, cwd=selected_dir)
+        else:  # For Linux and Mac
+            subprocess.check_call(npm_commands,cwd=selected_dir)
+        
         print(f"\n***Successfully installed npm module: {module_name}***\n")
         time.sleep(3)
         clear_output()
@@ -44,13 +49,18 @@ def run_in_virtualenv(commands,selected_dir):
     
 def check_installs():
     try:
-        subprocess.check_call(['node', '-v'])
+
+        if sys.platform.startswith('win'):  # For Windows
+            subprocess.check_call(['node', '-v'],shell=True)
+        else:  # For Linux and Mac
+            subprocess.check_call(['node', '-v'])
         print("\n***NodeJs confirmed to be installed***\n")
     except subprocess.CalledProcessError:
         print("\n***NodeJs is not installed. Please install or try to install packages manually***\n")
         sys.exit()
 
 
+check_installs()
 current_file_path = os.path.abspath(__file__) ##project file destination
 
 dest_file_path = os.path.join(os.path.dirname(current_file_path), 'project/carhub')
