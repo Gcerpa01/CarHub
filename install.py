@@ -15,7 +15,7 @@ def install_npm_module(module_name,selected_dir,save=False):
         npm_commands = ['npm', 'install', module_name]
         if save:
             npm_commands.append("--save")
-        subprocess.check_call(npm_commands, cwd=selected_dir)
+        subprocess.check_call(npm_commands,shell=True, cwd=selected_dir)
         print(f"\n***Successfully installed npm module: {module_name}***\n")
         time.sleep(3)
         clear_output()
@@ -27,7 +27,11 @@ def install_npm_module(module_name,selected_dir,save=False):
 
 def run_in_virtualenv(commands,selected_dir):
     try:
-        activate_cmd = '. .venv/bin/activate && '
+        if sys.platform.startswith('win'):  # For Windows
+            activate_cmd = 'activate && '
+        else:  # For Linux and Mac
+            activate_cmd = '. .venv/bin/activate && '
+
         full_cmd = activate_cmd + ' && '.join(commands)
         subprocess.check_call(full_cmd, shell=True,cwd=selected_dir)
         print(f"\n***Successfully virtual command: {commands}***\n")
