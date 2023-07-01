@@ -6,19 +6,29 @@ import time
 
 def run_npm_module(selected_dir):
     try:
-        subprocess.check_call(['npm', 'start'], cwd=selected_dir)
+        if sys.platform.startswith('win'):  # For Windows
+            subprocess.check_call(['npm', 'start'], cwd=selected_dir,shell=True)
+        else:  # For Linux and Mac
+            subprocess.check_call(['npm', 'start'], cwd=selected_dir)
         print(f"Front end started successfully")
     except subprocess.CalledProcessError:
         print(f"Front end failed to start")
+        sys.exit()
 
 def run_in_virtualenv(command, selected_dir):
     try:
-        activate_cmd = 'source .venv/bin/activate && '
+
+        if sys.platform.startswith('win'):  # For Windows
+            activate_cmd = 'activate && '
+        else:  # For Linux and Mac
+            activate_cmd = 'source .venv/bin/activate && '
+
+
         full_cmd = activate_cmd + command
         subprocess.check_call(full_cmd, shell=True, cwd=selected_dir)
     except subprocess.CalledProcessError:
         print("Failed to execute command in the virtual environment.")
-
+        sys.exit()
 
 print("---------------------------------")
 print("---------------------------------")
