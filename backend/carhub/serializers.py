@@ -19,12 +19,18 @@ class MessageSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['title', 'price', 'description']
 
 class CartItemSerializer(serializers.ModelSerializer):
     product = ProductSerializer()
 
     class Meta:
         model = CartItem
-        fields = '__all__'
+        fields = ['id', 'product', 'quantity']
+
+    def create(self, validated_data):
+        product_data = validated_data.pop('product')
+        product = Product.objects.create(**product_data)
+        cart_item = CartItem.objects.create(product=product, **validated_data)
+        return cart_item
 

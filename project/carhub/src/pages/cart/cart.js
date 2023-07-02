@@ -25,12 +25,31 @@ const Cart = () => {
     }
   };
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   // Calculate subtotal of the cart items
   const calculateSubtotal = () => {
     const total = cartItems.reduce(
       (sum, item) => sum + parseFloat(item.product.price) * item.quantity,
       0
     );
+    return total.toFixed(2);
+  };
+
+  const calculateTax = () => {
+    const taxRate = 0.08; // Assuming a tax rate of 8%
+    const subtotal = parseFloat(calculateSubtotal());
+    const tax = subtotal * taxRate;
+    return tax.toFixed(2);
+  };
+
+  const calculateTotal = () => {
+    const subtotal = parseFloat(calculateSubtotal());
+    const tax = parseFloat(calculateTax());
+    const total = subtotal + tax;
     return total.toFixed(2);
   };
 
@@ -55,7 +74,7 @@ const Cart = () => {
     <div className="cart-page">
       <Header />
       <h2 className="contenth2-heading">My Cart</h2>
-      <div className="cart-container">
+      <div className="cart-page-container">
         {cartItems.length > 0 ? (
           <div>
             {cartItems.map((item) => (
@@ -63,7 +82,7 @@ const Cart = () => {
                 <img className="cart-item-image" src={item.product.image} alt={item.product.title} />
                 <div className="cart-item-details">
                   <h3 className="cart-item-title">{item.product.title}</h3>
-                  <p className="cart-item-price">{item.product.price}</p>
+                  <p className="cart-item-price">{formatter.format(item.product.price)}</p>
                 </div>
                 <div className="cart-item-actions">
                   <span className="cart-item-quantity">Qty: {item.quantity}</span>
@@ -76,7 +95,10 @@ const Cart = () => {
                 </div>
               </div>
             ))}
-            <div className="cart-subtotal">Subtotal: ${calculateSubtotal()}</div>
+            <div className="cart-subtotal">{formatter.format(calculateSubtotal())}</div>
+            <div className="cart-tax">{formatter.format(calculateTax())}</div>
+            <hr class="separator-cart"></hr>
+            <div className="cart-total">{formatter.format(calculateTotal())}</div>
             <button className="checkout-button">Checkout</button>
           </div>
         ) : (

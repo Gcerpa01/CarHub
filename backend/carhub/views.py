@@ -144,7 +144,6 @@ def product_list(request, format=None):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
 @api_view(['GET', 'PUT', 'DELETE'])
 def product_detail(request, id, format=None):
     try:
@@ -167,7 +166,6 @@ def product_detail(request, id, format=None):
         product.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
 # CartItem calls
 
 @api_view(['GET', 'POST'])
@@ -180,10 +178,11 @@ def cart_item_list(request, format=None):
     if request.method == 'POST':
         serializer = CartItemSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            cart_item = serializer.save()
+            updated_cart_item = CartItem.objects.get(pk=cart_item.pk)  # Retrieve the saved cart item with relationships
+            updated_serializer = CartItemSerializer(updated_cart_item)
+            return Response(updated_serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def cart_item_detail(request, id, format=None):
