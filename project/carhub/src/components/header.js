@@ -10,11 +10,16 @@ export default function Header() {
 
   useEffect(() => {
     fetchCartData();
+    const interval = setInterval(fetchCartData, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   const fetchCartData = async () => {
     try {
-      const response = await fetch('http://localhost:8000/cart-items/'); // Replace with your actual API endpoint
+      const response = await fetch('http://localhost:8000/cart-items/');
       if (response.ok) {
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {
@@ -30,6 +35,11 @@ export default function Header() {
       console.log('Error fetching cart data:', error);
     }
   };
+
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
 
   const calculateSubtotal = (items) => {
     const total = items.reduce((sum, item) => sum + parseFloat(item.product.price) * item.quantity, 0);
@@ -52,7 +62,6 @@ export default function Header() {
         method: 'DELETE',
       });
       if (response.ok) {
-        // Remove the item from the cartItems array
         const updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
         setCartItems(updatedCartItems);
         setCartItemCount(updatedCartItems.length);
@@ -64,6 +73,7 @@ export default function Header() {
       console.log('Error removing item from cart:', error);
     }
   };
+  
 
   return (
     <header className="header">
@@ -109,11 +119,11 @@ export default function Header() {
                             <div className="cart-item">
                               <div className="cart-item-info">
                                 <p>{item.product.title}</p>
-                                <p>{item.product.price}</p>
+                                <p>{formatter.format(item.product.price)}</p>
                               </div>
                               <div className="cart-item-actions">
-                                <span onClick={() => removeCartItem(item)}>&times;</span>
-                                <span>Qty: {item.quantity}</span>
+                              <span onClick={() => removeCartItem(item)}>&times;</span>
+                              <span>Qty: {item.quantity}</span>
                               </div>
                             </div>
                           </div>
@@ -127,10 +137,10 @@ export default function Header() {
                   <div className="cart-summary">
                     <p className="cart-total">Subtotal: {subtotal}</p>
                     <a href="/cart">
-                    <button className="checkout-button">Checkout</button>
+                      <button className="checkout-button">Checkout</button>
                     </a>
                   </div>
-                  <a className="continue-shopping" href="/shop">
+                  <a className="continue-shopping" onClick={toggleCart}>
                     Continue Shopping
                   </a>
                 </div>
