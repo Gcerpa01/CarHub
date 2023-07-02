@@ -70,11 +70,21 @@ install_npm_module("@coreui/coreui",dest_file_path)
 install_npm_module("@coreui/react",dest_file_path)
 
 dest_file_path = os.path.join(os.path.dirname(current_file_path), 'backend')
-virtualenv_commands = [
-    'pip install django',
-    'pip install djangorestframework',
-    'pip install django-cors-headers'
-]
+
+if sys.platform.startswith('win'):  # For Windows
+    virtualenv_commands = [
+        'pip install django',
+        'pip install djangorestframework',
+        'pip install django-cors-headers'
+    ]
+else:  # For Linux and Mac
+    virtualenv_commands = [
+        'pip3 install django',
+        'pip3 install djangorestframework',
+        'pip3 install django-cors-headers'
+    ]
+    
+
 
 run_in_virtualenv(virtualenv_commands,dest_file_path)
 
