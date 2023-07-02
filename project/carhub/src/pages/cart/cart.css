@@ -2,7 +2,6 @@
     margin: 10px 5px 10px 5px;
     border: 1px solid #ccc;
     padding: 10px;
-    background-color: #f7f7f7;
   }
   
   .cart-subtotal,
@@ -45,7 +44,7 @@
 
   .separator-cart {
     border: none;
-    width: 100%%;
+    width: 100%;
     border-top: 1px solid #ccc;
   }
 

@@ -135,7 +135,7 @@ export default function Header() {
                   </div>
                   <hr className="cart-separator" />
                   <div className="cart-summary">
-                    <p className="cart-total">Subtotal: {subtotal}</p>
+                    <p className="cart-subtotal">{subtotal}</p>
                     <a href="/cart">
                       <button className="checkout-button">Checkout</button>
                     </a>
